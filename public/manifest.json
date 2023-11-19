@@ -1,0 +1,23 @@
+{
+  "short_name": "Realpop",
+  "name": "Realpop",
+  "icons": [
+    {
+      "src": "favicon.ico"
+    },
+    {
+      "src": "realpop192x",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "realpop512x",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
