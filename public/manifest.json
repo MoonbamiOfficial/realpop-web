@@ -3,17 +3,9 @@
   "name": "Realpop",
   "icons": [
     {
-      "src": "favicon.ico"
-    },
-    {
-      "src": "realpop192x",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "realpop512x",
-      "type": "image/png",
-      "sizes": "512x512"
+      "src": "favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "64x64 32x32 24x24 16x16"
     }
   ],
   "start_url": ".",
