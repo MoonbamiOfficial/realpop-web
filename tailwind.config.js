@@ -11,6 +11,10 @@ module.exports = {
       },
       container: {
         center: true,
+      },
+      screens: {
+        'xs': '475px',
+        'premium': '1920px',
       }
     },
   },
