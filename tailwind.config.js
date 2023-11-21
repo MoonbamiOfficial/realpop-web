@@ -9,6 +9,9 @@ module.exports = {
         'cetacean-blue': '#150050',
         'electric-pink': '#FB2576',
       },
+      container: {
+        center: true,
+      }
     },
   },
   plugins: [],
