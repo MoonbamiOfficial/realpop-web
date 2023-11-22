@@ -18,6 +18,9 @@ module.exports = {
       screens: {
         'xs': '475px',
         'premium': '1920px',
+      },
+      dropShadow: {
+        'shop-now-btn': '0px 0px 16px rgba(251, 37, 118, 1)',
       }
     },
   },
