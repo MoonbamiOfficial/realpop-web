@@ -8,6 +8,9 @@ module.exports = {
       colors: {
         'cetacean-blue': '#150050',
         'electric-pink': '#FB2576',
+
+        // Using legacy `rgba`
+        'opaque-black': 'rgba(var(--opaque-black), 0.5)'
       },
       container: {
         center: true,
