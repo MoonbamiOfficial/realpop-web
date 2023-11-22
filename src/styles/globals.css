@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variables */
+:root {
+  --electric-pink: 251, 37, 118;
+  --deep-violet: 63, 0, 113;
+  --cetacean-blue: 21, 0, 80;
+  --opaque-black: 0, 0, 0;
+}
+
+/* defaults */
+*,
+::before,
+::after {
+  @apply box-border p-0 m-0
+}
+
+body {
+  @apply bg-black font-[Poppins] text-white
+}
+
+/* .container {
+  @apply border-2 border-electric-pink
+} */
