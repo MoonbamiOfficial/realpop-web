@@ -18,6 +18,9 @@
 }
 
 body {
-  @apply bg-white font-[Poppins] text-white
+  @apply bg-black font-[Poppins] text-white
 }
 
+/* .container {
+  @apply border-2 border-electric-pink
+} */
