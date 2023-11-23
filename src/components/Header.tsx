@@ -82,7 +82,7 @@ const Header = () => {
 
         {/* Right */}
         <div id="right" className=" flex justify-end items-center gap-x-[15px] w-[115px] md:w-[130px] md:gap-x-[30px] lg:w-[140px] 2xl:w-[160px] 2xl:gap-x-[50px]">
-          <button className="user-cart hidden lg:text-[24px]">
+          <button className="user-cart hidden lg:block lg:text-[24px]">
             <Link to="" className="">
               <i className="fa-solid fa-cart-shopping"></i>
             </Link>
