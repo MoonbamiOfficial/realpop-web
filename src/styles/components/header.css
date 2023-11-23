@@ -7,7 +7,7 @@
   @apply w-[100px] h-[50px] flex items-center justify-center
 }
 /* User nav */
-.user-cart, .user-icon {
+.user-cart, .user-btn {
   @apply w-[50px] h-[50px] text-[20px] sm:text-[24px] md:text-[28px]
 }
 /* Main nav */
@@ -17,6 +17,10 @@
 /* Hamburger nav */
 .burger-nav {
   @apply text-left font-[500px] w-[100px] capitalize bg-transparent rounded-[4px] hover:bg-electric-pink hover:pl-[12px] transition-all
+}
+/* User nav */
+.user-nav {
+  @apply text-right font-[500px] w-[100px] capitalize bg-transparent rounded-[4px] hover:bg-electric-pink hover:pr-[12px] transition-all
 }
 
 
