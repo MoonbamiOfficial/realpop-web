@@ -7,7 +7,7 @@ type Props = {}
 
 const Gradient = (props: Props) => {
   return (
-    <div className="gradient fixed bottom-0 h-[500px] w-screen -z-40 "></div>
+    <div className="gradient fixed bottom-0 h-[70vh] w-screen -z-40 "></div>
   )
 }
 
