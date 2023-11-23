@@ -2,15 +2,18 @@ import React from 'react'
 
 // Components
 import ShopNowBtn from '../../components/ui/ShopNowBtn'
-import HomeBg from '../../components/assets/HomeBg'
-import Gradient from '../../components/assets/Gradient'
+
+// Styles
+import Girl_Groups_Video from '../../assets/videos/bgvideo.mp4'
+import '../../styles/components/gradient.css'
+
 
 type Props = {}
 
 const Home = (props: Props) => {
   return (
     <>
-      <HomeBg />
+      <BgVideo />
       <Gradient />
       <section id="home" className="container">
         <div className="ads relative top-[400px] w-[400px] flex flex-col items-end gap-y-[50px] ml-[40px] sm:w-[500px] sm:ml-[50px] sm:top-[350px] lg:top-[325px] lg:mx-0 lg:ml-[75px] xl:ml-[100px] 2xl:ml-[150px] premium:w-[600px] premium:ml-[200px] ">
@@ -25,4 +28,15 @@ const Home = (props: Props) => {
   )
 }
 
+const BgVideo = (props: Props) => {
+  return (
+    <video src={ Girl_Groups_Video } loop muted autoPlay className="absolute top-0 -z-50 w-full h-full object-cover "></video>
+  )
+}
+
+const Gradient = (props: Props) => {
+  return (
+    <div className="gradient fixed bottom-0 h-[70vh] w-screen -z-40 "></div>
+  )
+}
 export default Home
