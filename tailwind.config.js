@@ -11,7 +11,9 @@ module.exports = {
         'deep-violet': '#3F0071',
 
         // Using legacy `rgba`
-        'opaque-black': 'rgba(var(--opaque-black), 0.5)'
+        'opaque-black': 'rgba(var(--opaque-black), 0.5)',
+        'opaque-deep-violet': 'rgba(var(--deep-violet), 0.5)',
+        'opaque-electric-pink': 'rgba(var(--electric-pink), 0.8)',
       },
       container: {
         center: true,
