@@ -15,17 +15,6 @@ const Header = () => {
   // Handle user menu
   const [ isUserDropdownActive, setIsUserDropdownActive ] = useState(false)
 
-  // Handle header bg when scrolling
-  const [ headerBg, setHeaderBg ] = useState("header-show");
-  const scrollEvent = () => {
-    if(window.scrollY < 50) return setHeaderBg("header-show");
-    else if(window.scrollY > 50) return setHeaderBg("header-hide");
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', scrollEvent);
-    return () => window.removeEventListener('scroll', scrollEvent);
-  }, []);
 
   return (
     <>
@@ -33,7 +22,7 @@ const Header = () => {
 
 
       {/* Left */}
-      <div id={ headerBg } className="header-bg absolute top-0 z-50 bg-opaque-black w-screen h-[60px] sm:h-[80px] "></div>
+      <div className="header-bg absolute z-50 bg-opaque-black w-full h-[60px] sm:h-[80px] "></div>
       <header id="" className="container mx-auto relative top-0 z-50 w-full h-[60px] flex justify-between items-center px-[15px] sm:px-[25px] sm:h-[80px] md:px-[50px] lg:px-[75px] xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
         <div id="left" className=" flex items-center gap-x-[8px] w-[115px] md:w-[130px] lg:w-[140px] lg:gap-x-[32px] 2xl:w-[160px]">
           <button onClick={ e => {
