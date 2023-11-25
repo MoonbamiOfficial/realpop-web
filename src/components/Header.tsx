@@ -33,8 +33,8 @@ const Header = () => {
 
 
       {/* Left */}
-      <div id={ headerBg } className="header-bg fixed top-0 z-50 bg-opaque-black w-screen h-[60px] sm:h-[80px] "></div>
-      <header id="" className="container mx-auto fixed left-[50%] z-50 w-full h-[60px] flex justify-between items-center px-[15px] sm:px-[25px] sm:h-[80px] md:px-[50px] lg:px-[75px] xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
+      <div id={ headerBg } className="header-bg absolute top-0 z-50 bg-opaque-black w-screen h-[60px] sm:h-[80px] "></div>
+      <header id="" className="container mx-auto relative top-0 z-50 w-full h-[60px] flex justify-between items-center px-[15px] sm:px-[25px] sm:h-[80px] md:px-[50px] lg:px-[75px] xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
         <div id="left" className=" flex items-center gap-x-[8px] w-[115px] md:w-[130px] lg:w-[140px] lg:gap-x-[32px] 2xl:w-[160px]">
           <button onClick={ e => {
             setIsDropdownActive(!isDropdownActive)
@@ -47,8 +47,8 @@ const Header = () => {
           {/* Dropdown for burger menu */}
           {isDropdownActive && (
             <>
-              <div className="dropdown-bg fixed top-[60px] left-0 w-screen h-[180px] bg-opaque-black border-electric-pink border-b-[5px] sm:top-[80px] lg:hidden"></div>
-              <div className="dropdown z-50 flex items-start fixed top-[60px]  h-[150px] sm:top-[80px] lg:hidden ">
+              <div className="dropdown-bg absolute top-[60px] left-0 w-screen h-[180px] bg-opaque-black border-electric-pink border-b-[5px] sm:top-[80px] lg:hidden"></div>
+              <div className="dropdown z-50 flex items-start absolute top-[60px]  h-[150px] sm:top-[80px] lg:hidden ">
                 <div className="flex flex-col gap-y-[6px] ">
                   <NavLink to="" className="burger-nav ">Home</NavLink>
                   <NavLink to="about" className="burger-nav ">About</NavLink>
@@ -101,8 +101,8 @@ const Header = () => {
           {/* Dropdown for user menu */}
           {isUserDropdownActive && (
             <>
-              <div className="dropdown-bg fixed top-[60px] left-0 w-screen h-[180px] bg-opaque-black border-electric-pink border-b-[5px] sm:top-[80px] lg:hidden"></div>
-              <div className="dropdown  z-50 flex items-start fixed top-[60px]  h-[150px] sm:top-[80px] lg:hidden ">
+              <div className="dropdown-bg absolute top-[60px] left-0 w-screen h-[180px] bg-opaque-black border-electric-pink border-b-[5px] sm:top-[80px] lg:hidden"></div>
+              <div className="dropdown  z-50 flex items-start absolute top-[60px]  h-[150px] sm:top-[80px] lg:hidden ">
                 <div className="flex flex-col gap-y-[6px] ">
                   <NavLink to="profile" className="user-nav ">Profile</NavLink>
                   <NavLink to="cart" className="user-nav ">Cart</NavLink>
