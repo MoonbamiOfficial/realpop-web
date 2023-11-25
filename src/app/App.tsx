@@ -6,6 +6,7 @@ import Header from '../components/Header'
 
 // Pages
 import Home from './pages/Home'
+import About from './pages/About'
 
 type Props = {}
 
@@ -16,6 +17,7 @@ const App = (props: Props) => {
       <main>
       <Routes>
         <Route index element={<Home />} />
+        <Route path="about" element={<About /> } />
       </Routes>
       </main>
     </BrowserRouter>
