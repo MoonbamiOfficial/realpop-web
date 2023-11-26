@@ -26,12 +26,18 @@ const About = (props: Props) => {
 
           {/* About Us */}
           <div className="about-us relative flex flex-col items-center">
-            <img src={ Realpop_Team } alt="Realpop Team" className="z-10 w-[400px] h-[200px] rounded-[32px] sm:w-[450px] sm:h-[225px] md:w-[500px] md:h-[250px] lg:w-[600px] lg:h-[300px]" />
+            <div className="z-10 relative">
+              <img src={ Realpop_Team } alt="Realpop Team" className="z-10 w-[400px] h-[200px] rounded-[32px] sm:w-[450px] sm:h-[225px] md:w-[500px] md:h-[250px] lg:w-[600px] lg:h-[300px]" />
+              <div className="names absolute top-0 flex w-full justify-around text-[1.25rem] mt-1">
+                <h1>Chris</h1>
+                <h1>Jam</h1>
+              </div>
+            </div>
             <div className="text-bg pb-[75px] mt-[-75px] flex flex-col items-center bg-opaque-black w-[450px] rounded-[32px] sm:w-[550px] md:w-[650px] lg:w-[700px]">
               <div className="text-holder mt-[75px] w-[400px] gap-y-[8px] md:w-[500px] lg:w-[600px]">
                 <h1 className="capitalize text-[2.5rem] font-[700] tracking-[-0.025rem]">About Us</h1>
                 <hr />
-                <p className="mt-2 w-[400px] md:w-[500px] lg:w-[600px]">My friend and I really love K-Pop especially one of the most popular girl group called TWICE. One day, my instructor decided that we have to create  project about creating a website. I immediately think about developing my own ecommerce website. That&apos;s why I talked to my friend and asked him to be my client for the website that I want to develop. Together, we created the Realpop for the K-Pop fans around the world as our benificiaries.</p>
+                <p className="mt-2 w-[400px] md:w-[500px] lg:w-[600px]">My friend (Chris) and I really love K-Pop especially one of the most popular girl group called TWICE. One day, my instructor decided that my section have to create  project about creating a website. I immediately think about developing my own ecommerce website. That&apos;s why I talked to my friend and asked him to be my client for the website that I want to develop. Together, we created the Realpop for the K-Pop fans around the world as our benificiaries.</p>
               </div>
             </div>
           </div>
