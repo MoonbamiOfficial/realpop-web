@@ -35,8 +35,6 @@ const Header = () => {
           </button>
           {/* Dropdown for burger menu */}
           {isDropdownActive && (
-            <>
-              <div className="dropdown-bg absolute top-[60px] left-0 w-screen h-[180px] bg-opaque-black border-electric-pink border-b-[5px] sm:top-[80px] lg:hidden"></div>
               <div className="dropdown z-50 flex items-start absolute top-[60px]  h-[150px] sm:top-[80px] lg:hidden ">
                 <div className="flex flex-col gap-y-[6px] ">
                   <NavLink to="" className="burger-nav ">Home</NavLink>
@@ -46,7 +44,6 @@ const Header = () => {
                   <NavLink to="help" className="burger-nav ">Help</NavLink>
                 </div>
             </div>
-          </>
         )}
           <img src={ Realpop_Logo } alt="Realpop Logo" className="w-[60px] h-[60px] hidden lg:block cursor-pointer" />
           <Link to="" className="hidden text-[1.5rem] font-[700] capitalize lg:block xl:hidden">Rp</Link>
@@ -89,21 +86,24 @@ const Header = () => {
           </button>
           {/* Dropdown for user menu */}
           {isUserDropdownActive && (
-            <>
-              <div className="dropdown-bg absolute top-[60px] left-0 w-screen h-[180px] bg-opaque-black border-electric-pink border-b-[5px] sm:top-[80px] lg:hidden"></div>
               <div className="dropdown  z-50 flex items-start absolute top-[60px]  h-[150px] sm:top-[80px] lg:hidden ">
                 <div className="flex flex-col gap-y-[6px] ">
                   <NavLink to="profile" className="user-nav ">Profile</NavLink>
                   <NavLink to="cart" className="user-nav ">Cart</NavLink>
                 </div>
             </div>
-          </>
           )}
         </div>
       </header>
+      {isDropdownActive && (
+        <div className="dropdown-bg z-40 absolute top-[60px] w-full h-[180px] bg-opaque-black border-electric-pink border-b-[5px] sm:top-[80px] lg:hidden"></div>
+      )}
+      {isUserDropdownActive && (
+        <div className="dropdown-bg z-40 absolute top-[60px] w-full h-[180px] bg-opaque-black border-electric-pink border-b-[5px] sm:top-[80px] lg:hidden"></div>
+      )}
 
 
-
+      
     </>
   )
 }
