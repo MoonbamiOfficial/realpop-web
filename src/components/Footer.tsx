@@ -52,7 +52,7 @@ const Footer = (props: Props) => {
                       <p>zyozyoo</p>
                     </Link>
                   </div>
-                  <div className="chris-section flex flex-col gap-y-[8px] pb-2">
+                  <div className="jam-section flex flex-col gap-y-[8px] pb-2">
                     <p className="cursor-pointer">Realpop developer:</p>
                     <hr />
                     <Link to="https://www.facebook.com/MoonbamiOffcl" target="_blank" className="socmed flex items-center gap-x-[8px]">
