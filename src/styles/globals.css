@@ -18,9 +18,14 @@
 }
 
 body {
-  @apply bg-black font-[Poppins] text-white
+  @apply bg-cetacean-blue font-[Poppins] text-white
 }
 
 /* .container {
   @apply border-2 border-electric-pink
 } */
+
+/* Active Links */
+.active {
+  @apply bg-electric-pink rounded-[4px] pl-[12px] lg:pl-0 transition-all
+}

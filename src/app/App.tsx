@@ -6,6 +6,10 @@ import Header from '../components/Header'
 
 // Pages
 import Home from './pages/Home'
+import About from './pages/About'
+import Shop from './pages/Shop'
+import Contact from './pages/Contact'
+import Help from './pages/Help'
 
 type Props = {}
 
@@ -16,6 +20,10 @@ const App = (props: Props) => {
       <main>
       <Routes>
         <Route index element={<Home />} />
+        <Route path="about" element={<About /> } />
+        <Route path="shop" element={<Shop />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="help" element={<Help />} />
       </Routes>
       </main>
     </BrowserRouter>
