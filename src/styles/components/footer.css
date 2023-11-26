@@ -7,7 +7,7 @@ li {
 }
 /* Footer nav */
 .footer-nav {
-  @apply text-left font-[500px] w-[100px] capitalize bg-transparent rounded-[4px] hover:bg-electric-pink hover:pr-[12px] transition-all
+  @apply text-left font-[500px] w-[100px] capitalize bg-transparent rounded-[4px] hover:bg-electric-pink hover:pl-[12px] transition-all
 }
 
 /* Socmed */
