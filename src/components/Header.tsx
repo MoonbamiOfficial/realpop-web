@@ -6,6 +6,7 @@ import '../styles/components/header.css'
 
 // Assets
 import Realpop_Logo from '../assets/images/icon/realpop512x.png'
+import Admin_Jam from '../assets/images/user/hannionly.jpg'
 
 type Props = {}
 
@@ -82,7 +83,9 @@ const Header = () => {
             <div className="lg:hidden">
               <i className="fa-solid fa-user"></i>
             </div>
-            <Link to="" className="user-icon hidden w-[60px] h-[60px] border-[3px] border-white rounded-full lg:block "></Link>
+            <Link to="" className="user-icon hidden overflow-hidden w-[60px] h-[60px] border-[3px] border-white rounded-full lg:block ">
+              <img src={ Admin_Jam } alt="" />
+            </Link>
           </button>
           {/* Dropdown for user menu */}
           {isUserDropdownActive && (
