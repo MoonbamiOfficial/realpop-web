@@ -46,7 +46,9 @@ const Header = () => {
                 </div>
             </div>
         )}
-          <img src={ Realpop_Logo } alt="Realpop Logo" className="w-[60px] h-[60px] hidden lg:block cursor-pointer" />
+          <Link to="">
+            <img src={ Realpop_Logo } alt="Realpop Logo" className="w-[60px] h-[60px] hidden lg:block" />
+          </Link>
           <Link to="" className="hidden text-[1.5rem] font-[700] capitalize lg:block xl:hidden">Rp</Link>
           <Link to="" className="hidden text-[2rem] font-[700] capitalize xl:block">Realpop</Link>
         </div>
