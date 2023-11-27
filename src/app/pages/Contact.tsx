@@ -19,22 +19,22 @@ const Contact = (props: Props) => {
           <div className="contact-box grid grid-cols-2 gap-4">
             <div className="first-name-section flex flex-col gap-x-[8px] my-5">
               <label className="" htmlFor="first-name" >First Name</label>
-              <input id="first-name" className="px-[8px] py-[4px] bg-transparent outline-none " type="text" placeholder="First Name" />
+              <input id="first-name" className="px-[8px] py-[4px] bg-transparent outline-none " type="text" autoCapitalize="true" autoComplete="true" placeholder="First Name" />
               <hr />
             </div>
             <div className="last-name-section flex flex-col gap-x-[8px] my-5">
               <label className="" htmlFor="last-name" >Last Name</label>
-              <input id="last-name" className="px-[8px] py-[4px] bg-transparent outline-none " type="text" placeholder="Last Name" />
+              <input id="last-name" className="px-[8px] py-[4px] bg-transparent outline-none " type="text" autoCapitalize="true" autoComplete="true" placeholder="Last Name" />
               <hr />
             </div>
             <div className="last-name-section flex flex-col col-span-2 gap-x-[8px] my-5">
               <label className="" htmlFor="last-name" >Email</label>
-              <input id="email" className="px-[8px] py-[4px] bg-transparent outline-none " type="text" placeholder="Email" />
+              <input id="email" className="px-[8px] py-[4px] bg-transparent outline-none " type="text" autoComplete="true" placeholder="Email" />
               <hr />
             </div>
             <div className="last-name-section flex flex-col col-span-2 gap-x-[8px] my-5">
               <label className="" htmlFor="last-name" >Your Message</label>
-              <textarea id="message" className="px-[8px] py-[4px] bg-transparent outline-none " name="message" cols={30} rows={10} placeholder="Aa"></textarea>
+              <textarea id="message" className="px-[8px] py-[4px] bg-transparent outline-none" name="message" cols={30} rows={10} autoComplete="true" placeholder="Aa"></textarea>
               <hr />
             </div>
           </div>
