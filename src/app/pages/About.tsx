@@ -1,17 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+// Components
+import Background from '../../components/bg/Background'
+import Footer from '../../components/Footer'
+
 // Assets
 import Realpop from '../../assets/images/realpop-socprev.png'
 import Realpop_Team from '../../assets/images/founder-ceo.png'
-import Footer from '../../components/Footer'
 
 type Props = {}
 
 const About = (props: Props) => {
   return (
     <>
-      <div className="bg -z-50 h-full w-full absolute bg-cetacean-blue border-t-8 border-electric-pink"></div>
+      <Background />
       <section id="about" className="container mx-auto mb-[100px] mt-[350px] pt-[100px] h-full relative flex flex-col gap-y-[50px]">
         {/* About Realpop */}
           <div className="about-realpop relative flex flex-col items-center">
