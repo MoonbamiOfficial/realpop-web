@@ -23,8 +23,8 @@ const Header = () => {
 
 
       {/* Left */}
-      <div className="header-bg absolute z-50 bg-opaque-black w-full h-[60px] sm:h-[80px] "></div>
-      <header id="" className="container mx-auto relative top-0 z-50 w-full h-[60px] flex justify-between items-center px-[15px] sm:px-[25px] sm:h-[80px] md:px-[50px] lg:px-[75px] xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
+      <div className="header-bg absolute z-[100] bg-opaque-black w-full h-[60px] sm:h-[80px] "></div>
+      <header id="" className="container mx-auto relative top-0 z-[100] w-full h-[60px] flex justify-between items-center px-[15px] sm:px-[25px] sm:h-[80px] md:px-[50px] lg:px-[75px] xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
         <div id="left" className=" flex items-center gap-x-[8px] w-[115px] md:w-[130px] lg:w-[140px] lg:gap-x-[32px] 2xl:w-[160px]">
           <button onClick={ e => {
             setIsDropdownActive(!isDropdownActive)
@@ -36,7 +36,7 @@ const Header = () => {
           </button>
           {/* Dropdown for burger menu */}
           {isDropdownActive && (
-              <div className="dropdown z-50 flex items-start absolute top-[60px]  h-[150px] sm:top-[80px] lg:hidden ">
+              <div className="dropdown z-[100] flex items-start absolute top-[60px]  h-[150px] sm:top-[80px] lg:hidden ">
                 <div className="flex flex-col gap-y-[6px] ">
                   <NavLink to="" className="burger-nav ">Home</NavLink>
                   <NavLink to="about" className="burger-nav ">About</NavLink>
@@ -89,7 +89,7 @@ const Header = () => {
           </button>
           {/* Dropdown for user menu */}
           {isUserDropdownActive && (
-              <div className="dropdown  z-50 flex items-start absolute top-[60px]  h-[150px] sm:top-[80px] lg:hidden ">
+              <div className="dropdown  z-[100] flex items-start absolute top-[60px]  h-[150px] sm:top-[80px] lg:hidden ">
                 <div className="flex flex-col gap-y-[6px] ">
                   <NavLink to="profile" className="user-nav ">Profile</NavLink>
                   <NavLink to="cart" className="user-nav ">Cart</NavLink>
