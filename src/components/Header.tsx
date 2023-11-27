@@ -55,7 +55,9 @@ const Header = () => {
 
         {/* Mid */}
         <div id="mid" className="">
-          <img src={ Realpop_Logo } alt="Realpop Logo" className="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] lg:hidden cursor-pointer" />
+          <Link to="">
+            <img src={ Realpop_Logo } alt="Realpop Logo" className="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] lg:hidden" />
+          </Link>
           <div className="main-nav-container hidden lg:flex lg:gap-x-1">
             <NavLink to="" className="main-nav ">Home</NavLink>
             <NavLink to="about" className="main-nav ">About</NavLink>
