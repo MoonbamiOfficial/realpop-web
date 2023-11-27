@@ -46,9 +46,7 @@ const Header = () => {
                 </div>
             </div>
         )}
-          <Link to="">
-            <img src={ Realpop_Logo } alt="Realpop Logo" className="w-[60px] h-[60px] hidden lg:block" />
-          </Link>
+          <img src={ Realpop_Logo } alt="Realpop Logo" className="w-[60px] h-[60px] hidden lg:block" />
           <Link to="" className="hidden text-[1.5rem] font-[700] capitalize lg:block xl:hidden">Rp</Link>
           <Link to="" className="hidden text-[2rem] font-[700] capitalize xl:block">Realpop</Link>
         </div>
@@ -73,11 +71,9 @@ const Header = () => {
 
         {/* Right */}
         <div id="right" className=" flex justify-end items-center gap-x-[15px] w-[115px] md:w-[130px] md:gap-x-[30px] lg:w-[140px] 2xl:w-[160px] 2xl:gap-x-[50px]">
-          <button className="user-cart hidden lg:block lg:text-[24px]">
-            <Link to="" className="">
-              <i className="fa-solid fa-cart-shopping"></i>
-            </Link>
-          </button>
+          <NavLink to="cart" className="user-cart hidden items-center justify-center lg:flex  lg:text-[24px]">
+            <i className="fa-solid fa-cart-shopping"></i>
+          </NavLink>
           <button onClick={ e => {
             setIsUserDropdownActive(!isUserDropdownActive)
             if(isDropdownActive) setIsDropdownActive(!isDropdownActive)
@@ -87,7 +83,7 @@ const Header = () => {
             <div className="lg:hidden">
               <i className="fa-solid fa-user"></i>
             </div>
-            <Link to="" className="user-icon hidden overflow-hidden w-[60px] h-[60px] border-[3px] border-white rounded-full lg:block ">
+            <Link to="profile" className="user-icon hidden overflow-hidden w-[60px] h-[60px] border-[3px] border-white rounded-full lg:block ">
               <img src={ Admin_Jam } alt="" />
             </Link>
           </button>
