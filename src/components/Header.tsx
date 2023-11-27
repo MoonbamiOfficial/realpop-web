@@ -71,7 +71,7 @@ const Header = () => {
 
         {/* Right */}
         <div id="right" className=" flex justify-end items-center gap-x-[15px] w-[115px] md:w-[130px] md:gap-x-[30px] lg:w-[140px] 2xl:w-[160px] 2xl:gap-x-[50px]">
-          <NavLink to="cart" className="user-cart hidden items-center justify-center lg:flex  lg:text-[24px]">
+          <NavLink to="cart" className="user-cart hidden items-center justify-center rounded-[4px] hover:bg-electric-pink transition-all lg:flex lg:text-[24px]">
             <i className="fa-solid fa-cart-shopping"></i>
           </NavLink>
           <button onClick={ e => {
@@ -83,7 +83,7 @@ const Header = () => {
             <div className="lg:hidden">
               <i className="fa-solid fa-user"></i>
             </div>
-            <Link to="profile" className="user-icon hidden overflow-hidden w-[60px] h-[60px] border-[3px] border-white rounded-full lg:block ">
+            <Link to="profile" className="user-icon hidden overflow-hidden w-[60px] h-[60px] border-[3px] border-white rounded-full hover:border-electric-pink transition-all lg:block ">
               <img src={ Admin_Jam } alt="" />
             </Link>
           </button>
