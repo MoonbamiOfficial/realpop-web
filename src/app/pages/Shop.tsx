@@ -43,7 +43,8 @@ type Props = {}
 const Shop = (props: Props) => {
   return (
     <>
-      <section id="shop" className="container mx-auto my-[100px] relative h-full">
+      <div className="bg -z-50 h-full w-full absolute bg-cetacean-blue border-t-8 border-electric-pink"></div>
+      <section id="shop" className="container mx-auto mb-[100px] mt-[350px] pt-[100px] relative h-full">
 
         {/* TWICE */}
         <div className="twice-containter px-[15px] sm:px-[25px] md:px-[50px] lg:px-[75px] xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">

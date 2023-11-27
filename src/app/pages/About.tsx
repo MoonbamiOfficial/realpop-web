@@ -11,7 +11,8 @@ type Props = {}
 const About = (props: Props) => {
   return (
     <>
-      <section id="about" className="container mx-auto my-[100px] h-full relative flex flex-col gap-y-[50px]">
+      <div className="bg -z-50 h-full w-full absolute bg-cetacean-blue border-t-8 border-electric-pink"></div>
+      <section id="about" className="container mx-auto mb-[100px] mt-[350px] pt-[100px] h-full relative flex flex-col gap-y-[50px]">
         {/* About Realpop */}
           <div className="about-realpop relative flex flex-col items-center">
             <img src={ Realpop } alt="Realpop Social Preview" className="z-10 w-[400px] h-[200px] rounded-[32px] sm:w-[450px] sm:h-[225px] md:w-[500px] md:h-[250px] lg:w-[600px] lg:h-[300px]" />

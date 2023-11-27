@@ -11,12 +11,16 @@ import Shop from './pages/Shop'
 import Contact from './pages/Contact'
 import Help from './pages/Help'
 
+// Assets
+import Girl_Groups_Video from '../assets/videos/bgvideo.mp4'
+
 type Props = {}
 
 const App = (props: Props) => {
   return (
     <BrowserRouter>
       <Header />
+      <BgVideo />
       <main>
       <Routes>
         <Route index element={<Home />} />
@@ -27,6 +31,12 @@ const App = (props: Props) => {
       </Routes>
       </main>
     </BrowserRouter>
+  )
+}
+
+const BgVideo = (props: Props) => {
+  return (
+    <video src={ Girl_Groups_Video } loop muted autoPlay className="absolute top-0 -z-[100] w-full h-full object-cover "></video>
   )
 }
 

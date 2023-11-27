@@ -12,7 +12,8 @@ type Props = {}
 const Contact = (props: Props) => {
   return (
     <>
-      <section id="contact" className="container mx-auto h-full my-[100px] flex flex-col px-[15px] sm:px-[25px] md:px-[50px] lg:px-[75px] lg:flex-row xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
+      <div className="bg -z-50 h-full w-full absolute bg-cetacean-blue border-t-8 border-electric-pink"></div>
+      <section id="contact" className="container mx-auto mb-[100px] mt-[350px] pt-[100px] h-full flex flex-col px-[15px] sm:px-[25px] md:px-[50px] lg:px-[75px] lg:flex-row xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
         <div className="contact bg-deep-violet flex flex-col items-center px-[32px] py-[64px] ">
           <h1 className="capitalize text-[2.50rem] font-[700]">How can we help you?</h1>
           <div className="contact-box grid grid-cols-2 gap-4">

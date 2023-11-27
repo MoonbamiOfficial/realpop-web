@@ -4,7 +4,6 @@ import React from 'react'
 import ShopNowBtn from '../../components/ui/ShopNowBtn'
 
 // Styles
-import Girl_Groups_Video from '../../assets/videos/bgvideo.mp4'
 import '../../styles/components/gradient.css'
 
 
@@ -13,7 +12,6 @@ type Props = {}
 const Home = (props: Props) => {
   return (
     <>
-      <BgVideo />
       <Gradient />
       <section id="home" className="container mx-auto relative top-[400px] h-full lg:top-[350px] 2xl:top-[300px]">
         <div className="ads w-[400px] flex flex-col items-end gap-y-[50px] ml-[40px] sm:w-[500px] sm:ml-[50px] lg:mx-0 lg:ml-[75px] xl:ml-[100px] 2xl:ml-[150px] premium:w-[600px] premium:ml-[200px] ">
@@ -25,12 +23,6 @@ const Home = (props: Props) => {
         </div>
       </section>
     </>
-  )
-}
-
-const BgVideo = (props: Props) => {
-  return (
-    <video src={ Girl_Groups_Video } loop muted autoPlay className="absolute top-0 -z-50 w-full h-full object-cover "></video>
   )
 }
 
