@@ -14,6 +14,13 @@
 .main-nav {
   @apply text-center font-[500px] w-[100px] rounded-[4px] hover:bg-electric-pink capitalize transition-all
 }
+.main-nav, .user-cart {
+  padding-left: 0 !important;
+}
+.main-nav {
+  padding: 13px 0;
+
+}
 /* Hamburger nav */
 .burger-nav {
   @apply text-left font-[500px] w-[100px] capitalize bg-transparent rounded-[4px] hover:bg-electric-pink hover:pl-[12px] transition-all

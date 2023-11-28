@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 // Components
+import Background from '../../components/bg/Background'
 import Footer from '../../components/Footer'
 
 // Items
@@ -43,7 +44,8 @@ type Props = {}
 const Shop = (props: Props) => {
   return (
     <>
-      <section id="shop" className="container mx-auto my-[100px] relative h-full">
+      <Background />
+      <section id="shop" className="container mx-auto mt-[350px] py-[100px] relative h-full">
 
         {/* TWICE */}
         <div className="twice-containter px-[15px] sm:px-[25px] md:px-[50px] lg:px-[75px] xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">

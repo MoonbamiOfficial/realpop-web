@@ -1,4 +1,7 @@
 import React from 'react'
+
+// Components
+import Background from '../../components/bg/Background'
 import Footer from '../../components/Footer'
 
 type Props = {}
@@ -6,7 +9,8 @@ type Props = {}
 const Help = (props: Props) => {
   return (
     <>
-      <section id="help" className="container mx-auto h-full my-[100px] px-[15px] sm:px-[25px] md:px-[50px] lg:px-[75px] lg:flex-row xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
+      <Background />
+      <section id="help" className="container mx-auto mt-[350px] py-[100px] h-full px-[15px] sm:px-[25px] md:px-[50px] lg:px-[75px] lg:flex-row xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
         <div className="realpop-team bg-black px-[32px] py-[64px]">
           <h1 className="capitalize text-[2.50rem] font-[700] mb-5">FAQ</h1>
           <div className="team-box grid grid-cols-1 gap-[50px]">
