@@ -3,10 +3,6 @@ import React from 'react'
 // Components
 import ShopNowBtn from '../../components/ui/ShopNowBtn'
 
-// Styles
-import '../../styles/components/gradient.css'
-
-
 type Props = {}
 
 const Home = (props: Props) => {
