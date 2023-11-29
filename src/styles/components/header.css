@@ -15,7 +15,7 @@
   @apply text-center font-[500px] w-[100px] rounded-[4px] hover:bg-electric-pink capitalize transition-all
 }
 .main-nav, .user-cart {
-  padding-left: 0 !important;
+  padding: 0 0 !important;
 }
 .main-nav {
   padding: 13px 0;

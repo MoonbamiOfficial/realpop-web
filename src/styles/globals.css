@@ -27,5 +27,5 @@ body {
 
 /* Active Links */
 .active {
-  @apply bg-electric-pink rounded-[4px] pl-[12px]  transition-all
+  @apply bg-electric-pink rounded-[4px] px-[12px]  transition-all
 }

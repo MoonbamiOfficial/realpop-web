@@ -21,11 +21,11 @@ const Header = () => {
   const [ isUserDropdownActive, setIsUserDropdownActive ] = useState(false)
 
   const toggleBurgerDropdown = () => {
-    setIsDropdownActive(true)
+    setIsDropdownActive(!isDropdownActive)
     setIsUserDropdownActive(false)
   }
   const toggleUserDropdown = () => {
-    setIsUserDropdownActive(true)
+    setIsUserDropdownActive(!isUserDropdownActive)
     setIsDropdownActive(false)
   }
 
