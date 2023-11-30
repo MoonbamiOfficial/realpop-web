@@ -5,13 +5,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from '../components/header/Header'
 
 // Pages
-import Home from './pages/Home'
-import About from './pages/About'
-import Shop from './pages/Shop'
-import Contact from './pages/Contact'
-import Help from './pages/Help'
-import Cart from './pages/Cart'
-import Profile from './pages/Profile'
+import Home from './pages/home/Home'
+import About from './pages/about/About'
+import Shop from './pages/shop/Shop'
+import Contact from './pages/contact/Contact'
+import Help from './pages/help/Help'
+import Cart from './pages/cart/Cart'
+import Profile from './pages/profile/Profile'
 
 // Assets
 import Girl_Groups_Video from '../assets/videos/bgvideo.mp4'

@@ -2,12 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 // Components
-import Background from '../../components/bg/Background'
-import Footer from '../../components/Footer'
+import Background from '../../../components/bg/Background'
+import Footer from '../../../components/Footer'
 
 // Assets
-import Realpop from '../../assets/images/realpop-socprev.png'
-import Realpop_Team from '../../assets/images/founder-ceo.png'
+import Realpop from '../../../assets/images/realpop-socprev.png'
+import Realpop_Team from '../../../assets/images/founder-ceo.png'
 
 type Props = {}
 

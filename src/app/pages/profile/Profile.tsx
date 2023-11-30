@@ -1,8 +1,8 @@
 import React from 'react'
 
 // Components
-import Background from '../../components/bg/Background'
-import Footer from '../../components/Footer'
+import Background from '../../../components/bg/Background'
+import Footer from '../../../components/Footer'
 
 type Props = {}
 

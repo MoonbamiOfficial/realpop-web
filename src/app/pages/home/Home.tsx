@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Components
-import ShopNowBtn from '../../components/ui/ShopNowBtn'
+import ShopNowBtn from '../../../components/ui/ShopNowBtn'
 
 type Props = {}
 
