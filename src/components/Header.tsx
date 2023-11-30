@@ -2,11 +2,11 @@ import React, { useEffect, useState, useRef } from 'react'
 import { Link, NavLink, To } from 'react-router-dom'
 
 // Styles
-import '../../styles/components/header.css'
+import '../styles/components/header.css'
 
 // Assets
-import Realpop_Logo from '../../assets/images/icon/realpop512x.png'
-import Admin_Jam from '../../assets/images/user/hannionly.jpg'
+import Realpop_Logo from '../assets/images/icon/realpop512x.png'
+import Admin_Jam from '../assets/images/user/hannionly.jpg'
 
 type Props = {
   text: String
@@ -29,7 +29,7 @@ const Header = () => {
   }
 
   useEffect(() => {
-    let handleDropdown = ({ target } : MouseEvent) => {
+    let handleDropdown = ({ target } : Event) => {
       if(!dropdown.current?.contains(target as Node)) {
         setIsBurgerDropdownActive(false)
         setIsUserDropdownActive(false)
