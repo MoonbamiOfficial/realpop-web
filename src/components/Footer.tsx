@@ -16,8 +16,8 @@ type Props = {
 const Footer = () => {
   return (
     <>
-      <div className="footer-bg z-[100] absolute border-t-[8px] border-electric-pink bg-opaque-black w-full h-[750px] "></div>
-      <footer className="container z-[100] relative mx-auto bottom-0 w-full h-[750px] px-[15px] sm:px-[25px] md:px-[50px] lg:px-[75px] xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
+      <div className="footer-bg z-[80] absolute border-t-[8px] border-electric-pink bg-opaque-black w-full h-[750px] "></div>
+      <footer className="container z-[80] relative mx-auto bottom-0 w-full h-[750px] px-[15px] sm:px-[25px] md:px-[50px] lg:px-[75px] xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
           <div className="footer-full-content relative py-[50px] flex flex-col items-center gap-y-[80px]">
             <Link to="/" className="brand flex items-center gap-x-[8px] text-[2rem] font-[700] capitalize sm:text-[2.5rem] sm:gap-x-[12px] lg:text-[3rem] xl:text-[3.5rem] premium:text-[4rem]">
               <img src={ Realpop_Logo } alt="Realpop Logo" className="w-[60px] h-[60px] cursor-pointer sm:w-[70px] sm:h-[70px] lg:w-[80px] lg:h-[80px] xl:w-[90px] xl:h-[90px]" />

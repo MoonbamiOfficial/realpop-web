@@ -43,8 +43,8 @@ const Header = () => {
 
   return (
     <>
-      <div className="header-bg absolute z-[100] bg-opaque-black w-full h-[60px] sm:h-[80px] "></div>
-      <header ref={ dropdown } id="" className="container mx-auto relative top-0 z-[100] w-full h-[60px] flex justify-between items-center px-[15px] sm:px-[25px] sm:h-[80px] md:px-[50px] lg:px-[75px] xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
+      <div className="header-bg top-0 fixed z-[100] bg-opaque-black w-full h-[60px] sm:h-[80px] "></div>
+      <header ref={ dropdown } id="" className="container fixed left-[50%] translate-x-[-50%] top-0 z-[100] w-full h-[60px] flex justify-between items-center px-[15px] sm:px-[25px] sm:h-[80px] md:px-[50px] lg:px-[75px] xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
 
 
 
@@ -111,10 +111,10 @@ const Header = () => {
 
 
       {isBurgerDropdownActive && (
-        <div className="dropdown-bg z-40 absolute top-[60px] w-full h-[180px] bg-opaque-black border-electric-pink border-b-[5px] sm:top-[80px] lg:hidden"></div>
+        <div className="dropdown-bg z-[90] fixed top-[60px] w-full h-[180px] bg-opaque-black border-electric-pink border-b-[5px] sm:top-[80px] lg:hidden"></div>
       )}
       {isUserDropdownActive && (
-        <div className="dropdown-bg z-40 absolute top-[60px] w-full h-[180px] bg-opaque-black border-electric-pink border-b-[5px] sm:top-[80px] lg:hidden"></div>
+        <div className="dropdown-bg z-[90] fixed top-[60px] w-full h-[180px] bg-opaque-black border-electric-pink border-b-[5px] sm:top-[80px] lg:hidden"></div>
       )}
     </>
   )
