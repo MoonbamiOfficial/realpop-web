@@ -17,17 +17,21 @@
 .main-nav, .user-cart {
   padding: 13px 0 !important;
 }
-/* Hamburger nav */
+
+/* Dropdowns */
+.dropdown {
+  @apply font-[500px] w-[100px] capitalize bg-transparent rounded-[4px] hover:bg-electric-pink transition-all
+}
+.dropdown-bg {
+  @apply z-[90] fixed top-[60px] w-full h-[180px] bg-opaque-black border-electric-pink border-b-[5px] sm:top-[80px] lg:hidden
+}
 .burger-nav {
-  @apply text-left font-[500px] w-[100px] capitalize bg-transparent rounded-[4px] hover:bg-electric-pink hover:pl-[12px] transition-all
+  @apply text-left hover:pl-[12px] 
 }
-/* User nav */
 .user-nav {
-  @apply text-right font-[500px] w-[100px] capitalize bg-transparent rounded-[4px] hover:bg-electric-pink hover:pr-[12px] transition-all
+  @apply text-right hover:pr-[12px]
 }
 
-
-/* Dropdown */
 .dropdownActive {
   @apply flex 
 }

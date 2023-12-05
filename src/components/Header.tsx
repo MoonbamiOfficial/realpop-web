@@ -90,13 +90,13 @@ const Header = () => {
           <NavLink to="/cart" className="user-cart hidden items-center justify-center rounded-[4px] hover:bg-electric-pink transition-all lg:flex lg:text-[24px]">
             <i className="fa-solid fa-cart-shopping"></i>
           </NavLink>
-          <button onClick={toggleUserDropdown} className="user-btn lg:w-[60px] lg:h-[60px]">
-            <div className="lg:hidden">
+          <Link to="/profile" className="user-icon hidden overflow-hidden w-[60px] h-[60px] border-[3px] border-transparent rounded-full hover:border-electric-pink transition-all lg:block ">
+            <img src={ Admin_Jam } alt="" />
+          </Link>
+          <button onClick={ toggleUserDropdown } className="user-btn lg:hidden lg:w-[60px] lg:h-[60px]">
+            <div className="">
               <i className="fa-solid fa-user"></i>
             </div>
-            <Link to="/profile" className="user-icon hidden overflow-hidden w-[60px] h-[60px] border-[3px] border-white rounded-full hover:border-electric-pink transition-all lg:block ">
-              <img src={ Admin_Jam } alt="" />
-            </Link>
           </button>
           {/* Dropdown for user menu */}
           <div className={`${isUserDropdownActive? 'dropdownActive' : 'dropdownInactive'} z-[100] absolute top-[60px]  h-[150px] sm:top-[80px] lg:hidden`}>
@@ -111,10 +111,10 @@ const Header = () => {
 
 
       {isBurgerDropdownActive && (
-        <div className="dropdown-bg z-[90] fixed top-[60px] w-full h-[180px] bg-opaque-black border-electric-pink border-b-[5px] sm:top-[80px] lg:hidden"></div>
+        <div className="dropdown-bg"></div>
       )}
       {isUserDropdownActive && (
-        <div className="dropdown-bg z-[90] fixed top-[60px] w-full h-[180px] bg-opaque-black border-electric-pink border-b-[5px] sm:top-[80px] lg:hidden"></div>
+        <div className="dropdown-bg"></div>
       )}
     </>
   )
@@ -122,12 +122,12 @@ const Header = () => {
 
 function BurgerDropdown(props: Props) {
   return (
-    <NavLink to={props.to} className="burger-nav">{props.text}</NavLink>
+    <NavLink to={props.to} className="dropdown burger-nav">{props.text}</NavLink>
   )
 }
 function UserDropdown(props: Props) {
   return (
-    <NavLink to={props.to} className="user-nav">{props.text}</NavLink>
+    <NavLink to={props.to} className="dropdown user-nav">{props.text}</NavLink>
   )
 }
 
