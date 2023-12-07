@@ -20,10 +20,10 @@
 
 /* Dropdowns */
 .dropdown {
-  @apply font-[500px] w-[100px] capitalize bg-transparent rounded-[4px] hover:bg-electric-pink transition-all
+  @apply font-[500px] w-[100px] py-1 text-[14px] capitalize bg-transparent rounded-[4px] hover:bg-electric-pink transition-all sm:text-base sm:w-[125px] md:text-[18px] md:w-[150px] 
 }
 .dropdown-bg {
-  @apply z-[90] fixed top-[60px] w-full h-[180px] bg-opaque-black border-electric-pink border-b-[5px] sm:top-[80px] lg:hidden
+  @apply z-[90] fixed top-[60px] w-full h-[200px] bg-header-black border-electric-pink border-b-[5px] sm:top-[80px] sm:h-[225px] md:h-[250px] lg:hidden
 }
 .burger-nav {
   @apply text-left hover:pl-[12px] 
