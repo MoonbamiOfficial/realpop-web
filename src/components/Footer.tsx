@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, To } from 'react-router-dom'
 
 // Styles
 import '../styles/components/footer.css'
@@ -8,13 +8,16 @@ import '../styles/components/footer.css'
 import Realpop_Logo from '../assets/images/icon/realpop512x.png'
 
 
-type Props = {}
+type Props = {
+  text: String
+  to: To
+}
 
-const Footer = (props: Props) => {
+const Footer = () => {
   return (
     <>
-      <div className="footer-bg z-[100] absolute border-t-[8px] border-electric-pink bg-opaque-black w-full h-[750px] "></div>
-      <footer className="container z-[100] relative mx-auto bottom-0 w-full h-[750px] px-[15px] sm:px-[25px] md:px-[50px] lg:px-[75px] xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
+      <div className="footer-bg z-[80] absolute border-t-[8px] border-electric-pink bg-opaque-black w-full h-[750px] "></div>
+      <footer className="container z-[80] relative mx-auto bottom-0 w-full px-[15px] sm:px-[25px] md:px-[50px] lg:px-[75px] xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
           <div className="footer-full-content relative py-[50px] flex flex-col items-center gap-y-[80px]">
             <Link to="/" className="brand flex items-center gap-x-[8px] text-[2rem] font-[700] capitalize sm:text-[2.5rem] sm:gap-x-[12px] lg:text-[3rem] xl:text-[3.5rem] premium:text-[4rem]">
               <img src={ Realpop_Logo } alt="Realpop Logo" className="w-[60px] h-[60px] cursor-pointer sm:w-[70px] sm:h-[70px] lg:w-[80px] lg:h-[80px] xl:w-[90px] xl:h-[90px]" />
@@ -25,11 +28,11 @@ const Footer = (props: Props) => {
               <div className="navigate flex flex-col gap-y-[16px]">
                 <h2 className="text-[1.25rem] font-[700] capitalize sm:text-[1.5rem] lg:text-[1.8rem]">Navigate</h2>
                 <div className="links flex flex-col gap-y-[8px]">
-                  <NavLink to="/" className="footer-nav">Home</NavLink>
-                  <NavLink to="/about" className="footer-nav">About</NavLink>
-                  <NavLink to="/shop" className="footer-nav">Shop</NavLink>
-                  <NavLink to="/contact" className="footer-nav">Contact</NavLink>
-                  <NavLink to="/help" className="footer-nav">Help</NavLink>
+                  <Navigate to={"/"} text={"Home"} />
+                  <Navigate to={"/about"} text={"About"} />
+                  <Navigate to={"/shop"} text={"Shop"} />
+                  <Navigate to={"/contact"} text={"Contact"} />
+                  <Navigate to={"/help"} text={"Help"} />
                 </div>
               </div>
               {/* Follow Us */}
@@ -89,6 +92,12 @@ const Footer = (props: Props) => {
           </div>
       </footer>
     </>
+  )
+}
+
+const Navigate = (props: Props) => {
+  return (
+    <NavLink to={props.to} className="footer-nav">{props.text}</NavLink>
   )
 }
 

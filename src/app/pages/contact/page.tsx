@@ -7,6 +7,7 @@ import Footer from '../../../components/Footer'
 
 // Assets
 import Realpop_Logo from '../../assets/images/icon/realpop512x.png'
+import SendMessage from '../../../components/ui/SendMsgBtn'
 
 type Props = {}
 
@@ -14,33 +15,34 @@ const Contact = (props: Props) => {
   return (
     <>
       <Background />
-      <section id="contact" className="container mx-auto mt-[350px] py-[100px] h-full flex flex-col px-[15px] sm:px-[25px] md:px-[50px] lg:px-[75px] lg:flex-row xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
-        <div className="contact bg-deep-violet flex flex-col items-center px-[32px] py-[64px] ">
+      <section id="contact" className="container mx-auto mt-[350px] py-[100px] h-full flex flex-col px-[15px] sm:px-[25px] md:px-[50px] lg:px-[75px] xl:flex-row xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
+        <div className="message bg-deep-violet flex flex-col items-center gap-y-8 px-[32px] py-[64px] "> {/* message-seciton */}
           <h1 className="capitalize text-[2.50rem] font-[700]">How can we help you?</h1>
-          <div className="contact-box grid grid-cols-2 gap-4">
-            <div className="first-name-section flex flex-col gap-x-[8px] my-5">
+          <div className="contact-box grid grid-cols-2 gap-x-4 gap-y-8">
+            <div className="first-name-section flex flex-col gap-x-[8px]">
               <label className="" htmlFor="first-name" >First Name</label>
               <input id="first-name" className="px-[8px] py-[4px] bg-transparent outline-none " type="text" autoCapitalize="true" autoComplete="true" placeholder="First Name" />
               <hr />
             </div>
-            <div className="last-name-section flex flex-col gap-x-[8px] my-5">
+            <div className="last-name-section flex flex-col gap-x-[8px]">
               <label className="" htmlFor="last-name" >Last Name</label>
               <input id="last-name" className="px-[8px] py-[4px] bg-transparent outline-none " type="text" autoCapitalize="true" autoComplete="true" placeholder="Last Name" />
               <hr />
             </div>
-            <div className="last-name-section flex flex-col col-span-2 gap-x-[8px] my-5">
+            <div className="last-name-section flex flex-col col-span-2 gap-x-[8px]">
               <label className="" htmlFor="last-name" >Email</label>
               <input id="email" className="px-[8px] py-[4px] bg-transparent outline-none " type="text" autoComplete="true" placeholder="Email" />
               <hr />
             </div>
-            <div className="last-name-section flex flex-col col-span-2 gap-x-[8px] my-5">
+            <div className="last-name-section flex flex-col col-span-2 gap-x-[8px]">
               <label className="" htmlFor="last-name" >Your Message</label>
               <textarea id="message" className="px-[8px] py-[4px] bg-transparent outline-none" name="message" cols={30} rows={10} autoComplete="true" placeholder="Aa"></textarea>
               <hr />
             </div>
           </div>
+          <SendMessage />
         </div>
-        <div className="realpop-team bg-black px-[32px] py-[64px]">
+        <div className="realpop-team bg-black px-[32px] py-[64px]"> {/* realpop-seciton */}
           <h1 className="capitalize text-[2.50rem] font-[700] mb-5">Realpop Team</h1>
           <div className="team-box grid grid-cols-2 gap-[50px]">
             <div className="chris-section flex flex-col gap-y-[8px] pb-2">
