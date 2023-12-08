@@ -43,7 +43,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="header-bg top-0 fixed z-[100] bg-header-black w-full h-[60px] sm:h-[80px] "></div>
+      <div className="header-bg top-0 fixed z-[100] bg-black w-full h-[60px] sm:h-[80px] "></div>
       <header ref={ dropdown } id="" className="container fixed left-[50%] translate-x-[-50%] top-0 z-[100] w-full h-[60px] flex justify-between items-center px-[15px] sm:px-[25px] sm:h-[80px] md:px-[50px] lg:px-[75px] xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
 
 
