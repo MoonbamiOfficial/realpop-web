@@ -4,10 +4,14 @@
 
 /* Variables */
 :root {
+  /* rgb */
   --electric-pink: 251, 37, 118;
   --deep-violet: 63, 0, 113;
   --cetacean-blue: 21, 0, 80;
   --black: 0, 0, 0;
+
+  /* hex */
+  --hex-electric-pink: #FB2576;
 }
 
 /* defaults */
@@ -32,4 +36,28 @@ body {
 /* Home gradient */
 .gradient {
   background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.75) 49.06%, rgba(0, 0, 0, 0.50) 74.48%, rgba(0, 0, 0, 0.00) 100.05%);
+}
+
+/* Shop Links */
+.shop-link {
+  @apply hover:text-electric-pink transition-all
+}
+.moreDropdownActive {
+  @apply flex
+}
+.moreDropdownInactive {
+  @apply hidden
+}
+.more-dropdown::before {
+  content: "";
+  z-index: 90;
+  position: absolute;
+  top: -10px;
+  right: 33px;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  background-color: black;
+  /* border-left: 3px solid var(--hex-electric-pink);
+  border-top: 3px solid var(--hex-electric-pink); */
 }
