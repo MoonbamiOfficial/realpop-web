@@ -20,7 +20,7 @@ const About = (props: Props) => {
           <div className="about-realpop relative flex flex-col items-center">
             <img src={ Realpop } alt="Realpop Social Preview" className="z-10 w-[400px] h-[200px] rounded-[32px] sm:w-[450px] sm:h-[225px] md:w-[500px] md:h-[250px] lg:w-[600px] lg:h-[300px]" />
             <div className="text-bg pb-[75px] mt-[-75px] flex flex-col items-center bg-opaque-black w-[450px] rounded-[32px] sm:w-[550px] md:w-[650px] lg:w-[700px]">
-              <div className="text-holder mt-[75px] w-[400px] gap-y-[8px] md:w-[500px] lg:w-[600px]">
+              <div className="text-holder mt-[100px] w-[400px] gap-y-[8px] md:w-[500px] lg:w-[600px]">
                 <h1 className="capitalize text-[2.5rem] font-[700] tracking-[-0.025rem]">About Realpop</h1>
                 <hr />
                 <p className="mt-2 w-[400px] md:w-[500px] lg:w-[600px]">Realpop loves K-Pop just as much as you do! Listening to your favorite K-Pop artists brings us a lot of happiness in our life, but it's a little expensive to support them, isn&apos;t it? Realpop hopes our buyers will be happy with the prices of our girl group photocards from the current girl groups available. These girl groups include the TWICE,  NMIXX, NewJeans, aespa and LESSERAFIM.</p>
@@ -29,16 +29,16 @@ const About = (props: Props) => {
           </div>
 
           {/* About Us */}
-          <div className="about-us relative flex flex-col items-center">
-            <div className="z-10 relative">
+          <div className="about-us relative flex flex-col items-center ">
+            <div className="z-10 relative ">
               <img src={ Realpop_Team } alt="Realpop Team" className="z-10 w-[400px] h-[200px] rounded-[32px] sm:w-[450px] sm:h-[225px] md:w-[500px] md:h-[250px] lg:w-[600px] lg:h-[300px]" />
-              <div className="names absolute top-0 flex w-full justify-around text-[1.25rem] mt-1">
+              <div className="names absolute top-0 flex w-full justify-around bg-opaque-black rounded-t-[32px] text-[1.25rem]">
                 <h1>Chris</h1>
                 <h1>Jam</h1>
               </div>
             </div>
             <div className="text-bg pb-[75px] mt-[-75px] flex flex-col items-center bg-opaque-black w-[450px] rounded-[32px] sm:w-[550px] md:w-[650px] lg:w-[700px]">
-              <div className="text-holder mt-[75px] w-[400px] gap-y-[8px] md:w-[500px] lg:w-[600px]">
+              <div className="text-holder mt-[100px] w-[400px] gap-y-[8px] md:w-[500px] lg:w-[600px]">
                 <h1 className="capitalize text-[2.5rem] font-[700] tracking-[-0.025rem]">About Us</h1>
                 <hr />
                 <p className="mt-2 w-[400px] md:w-[500px] lg:w-[600px]">My friend (Chris) and I really love K-Pop especially one of the most popular girl group called TWICE. One day, my instructor decided that my section have to create  project about creating a website. I immediately think about developing my own ecommerce website. That&apos;s why I talked to my friend and asked him to be my client for the website that I want to develop. Together, we created the Realpop for the K-Pop fans around the world as our benificiaries.</p>
@@ -50,7 +50,7 @@ const About = (props: Props) => {
           <div className="credits relative flex flex-col items-center">
             <img src={ Realpop } alt="Realpop Team" className="z-10 w-[400px] h-[200px] rounded-[32px] sm:w-[450px] sm:h-[225px] md:w-[500px] md:h-[250px] lg:w-[600px] lg:h-[300px]" />
             <div className="text-bg pb-[75px] mt-[-75px] flex flex-col items-center bg-opaque-black w-[450px] rounded-[32px] sm:w-[550px] md:w-[650px] lg:w-[700px]">
-              <div className="text-holder mt-[75px] w-[400px] gap-y-[8px] md:w-[500px] lg:w-[600px]">
+              <div className="text-holder mt-[100px] w-[400px] gap-y-[8px] md:w-[500px] lg:w-[600px]">
                 <h1 className="capitalize text-[2.5rem] font-[700] tracking-[-0.025rem]">Credits</h1>
                 <hr />
                 <div className="credits-holder flex flex-col gap-y-[12px] ">
