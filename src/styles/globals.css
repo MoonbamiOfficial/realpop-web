@@ -22,7 +22,7 @@
 }
 
 body {
-  @apply bg-cetacean-blue font-[Poppins] text-white
+  @apply bg-cetacean-blue font-[Poppins] text-white 
 }
 
 /* .container {
