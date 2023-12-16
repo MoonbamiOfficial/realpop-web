@@ -12,9 +12,11 @@ module.exports = {
 
         // Using legacy `rgba`
         'opaque-black': 'rgba(var(--black), 0.5)',
+        'opaque-white': 'rgba(var(--white), 0.2)',
         'opaque-deep-violet': 'rgba(var(--deep-violet), 0.5)',
         'opaque-electric-pink': 'rgba(var(--electric-pink), 0.8)',
         'header-black': 'rgba(var(--black), 0.8)',
+        'header-white': 'rgba(var(--white), 0.8)',
       },
       container: {
         center: true,
