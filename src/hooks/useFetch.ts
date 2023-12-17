@@ -1,17 +1,22 @@
 import { useEffect, useState } from 'react'
 
 export const useFetch = (api: string) => {
-  const [ datas, setDatas ] = useState([])
+  const [ data, setData ] = useState([])
   const [ error, setError ] = useState({})
 
+  const getData = async () => {
+    let response = await fetch(api)
+    let result = await response.json()
+    return result
+  }
+
   useEffect(() => {
-    fetch(api)
-      .then(response => response.json())
-      .then(data => setDatas(data))
+    getData()
+      .then(data => setData(data))
       .catch(error => setError(error))
   }, [api])
 
   return {
-    datas, error
+    data, error
   }
 }
