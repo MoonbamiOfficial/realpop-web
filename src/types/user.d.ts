@@ -6,6 +6,7 @@ export type User = {
 }
 
 export type UserContextType = {
+  userTokens?: any
   user?: any
   loginUser?: any
   logoutUser?: any
