@@ -19,10 +19,10 @@ const Footer = () => {
       <div className="footer-bg z-[70] absolute border-t-[8px] border-electric-pink bg-opaque-black w-full h-[750px] "></div>
       <footer className="container z-[70] relative mx-auto bottom-0 w-full px-[15px] sm:px-[25px] md:px-[50px] lg:px-[75px] xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
           <div className="footer-full-content relative py-[50px] flex flex-col items-center gap-y-[80px]">
-            <Link to="/" className="brand flex items-center gap-x-[8px] text-[2rem] font-[700] capitalize sm:text-[2.5rem] sm:gap-x-[12px] lg:text-[3rem] xl:text-[3.5rem] premium:text-[4rem]">
-              <img src={ Realpop_Logo } alt="Realpop Logo" className="w-[60px] h-[60px] cursor-pointer sm:w-[70px] sm:h-[70px] lg:w-[80px] lg:h-[80px] xl:w-[90px] xl:h-[90px]" />
+            <h1 className="brand flex items-center gap-x-[8px] text-[2rem] font-[700] capitalize sm:text-[2.5rem] sm:gap-x-[12px] lg:text-[3rem] xl:text-[3.5rem] premium:text-[4rem]">
+              <img src={ Realpop_Logo } alt="Realpop Logo" className="w-[60px] h-[60px] select-none sm:w-[70px] sm:h-[70px] lg:w-[80px] lg:h-[80px] xl:w-[90px] xl:h-[90px]" />
               Realpop
-            </Link>
+            </h1>
             <div className="content flex justify-between w-full">
               {/* Navigate */}
               <div className="navigate flex flex-col gap-y-[16px]">
@@ -40,7 +40,7 @@ const Footer = () => {
                 <h2 className="text-[1.25rem] font-[700] capitalize sm:text-[1.5rem] lg:text-[1.8rem]">Follow Us</h2>
                 <div className="socmeds ">
                   <div className="chris-section flex flex-col gap-y-[8px] pb-2">
-                    <p className="cursor-pointer">Realpop owner:</p>
+                    <p className="cursor-pointer text-electric-pink font-semibold">Chris</p>
                     <hr />
                     <Link to="https://www.facebook.com/chrsdrl" target="_blank" className="socmed flex items-center gap-x-[8px]">
                       <div className=""><i className="fa-brands fa-facebook"></i></div>
@@ -56,7 +56,7 @@ const Footer = () => {
                     </Link>
                   </div>
                   <div className="jam-section flex flex-col gap-y-[8px] pb-2">
-                    <p className="cursor-pointer">Realpop developer:</p>
+                    <p className="cursor-pointer text-electric-pink font-semibold">Jam</p>
                     <hr />
                     <Link to="https://www.facebook.com/MoonbamiOffcl" target="_blank" className="socmed flex items-center gap-x-[8px]">
                       <div className=""><i className="fa-brands fa-facebook"></i></div>
@@ -87,7 +87,7 @@ const Footer = () => {
             </div>
             <div className="copyright w-full text-center">
               <hr className=""/>
-              <p className="my-4 uppercase">&copy; {new Date().getFullYear()} Realpop</p>
+              <p className="my-4 uppercase">&copy; {new Date().getFullYear()} Realpop from moonbami & jively</p>
             </div>
           </div>
       </footer>
