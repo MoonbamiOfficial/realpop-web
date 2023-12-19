@@ -9,6 +9,9 @@ import {
 // Layouts
 import Layout from './layout'
 
+// Utilities
+import PrivateRoute from '../utilities/PrivateRoute'
+
 // Pages
 import Home from './pages/home/page'
 import About from './pages/about/page'
@@ -17,6 +20,8 @@ import Contact from './pages/contact/page'
 import Help from './pages/help/page'
 import Cart from './pages/cart/page'
 import Profile from './pages/profile/page'
+import Login from './pages/login/page'
+import Signup from './pages/signup/page'
 
 // Sub-Pages
 import Twice from './pages/shop/twice/page'
@@ -33,6 +38,13 @@ type Props = {}
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
+      <Route path="/" element={<PrivateRoute />}>
+        {/* Routes that needs user authentication */}
+        <Route path="cart" element={<Cart />} />
+        <Route path="profile" element={<Profile />} />
+
+      </Route>
+      {/* Default routes */}
       <Route index element={<Home />} />
       <Route path="about" element={<About /> } />
       <Route path="shop" element={<Shop />} >
@@ -44,8 +56,8 @@ const router = createBrowserRouter(
       </Route>
       <Route path="contact" element={<Contact />} />
       <Route path="help" element={<Help />} />
-      <Route path="cart" element={<Cart />} />
-      <Route path="profile" element={<Profile />} />
+      <Route path="login" element={<Login />} />
+      <Route path="signup" element={<Signup />} />
 
       {/* 404 */}
       <Route path="*" element={<NotFound />} />
