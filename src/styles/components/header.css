@@ -2,28 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Header link */
+/* HEADER SECTION */
 .link {
   @apply w-[100px] h-[50px] flex items-center justify-center
 }
-/* User nav */
-.user-cart, .user-btn {
+.user-btn {
   @apply w-[50px] h-[50px] text-[20px] sm:text-[24px] md:text-[28px]
 }
-/* Main nav */
 .main-nav {
-  @apply text-center font-[500px] w-[100px] rounded-[4px] hover:bg-electric-pink capitalize transition-all
+  @apply text-center text-sm font-[500] w-[100px] rounded-[4px] hover:bg-electric-pink capitalize transition-all
 }
 .main-nav, .user-cart {
-  padding: 13px 0 !important;
+  padding: 6px 0 !important;
 }
-
-/* Dropdowns */
 .dropdown {
-  @apply font-[500px] w-[100px] py-1 text-[14px] capitalize bg-transparent rounded-[4px] hover:bg-electric-pink transition-all sm:text-base sm:w-[125px] md:text-[18px] md:w-[150px] 
+  @apply font-[500px] w-[100px] py-1 text-[12px] capitalize bg-transparent rounded-[4px] hover:bg-electric-pink transition-all lg:text-base sm:w-[125px] md:w-[150px] 
 }
 .dropdown-bg {
-  @apply z-[90] fixed top-[60px] w-full h-[200px] bg-black border-electric-pink border-b-[5px] sm:top-[80px] sm:h-[225px] md:h-[250px] lg:hidden
+  @apply z-[90] fixed top-[60px] w-full h-[200px] bg-black border-electric-pink border-b-[3px] sm:h-[230px] md:h-[260px] lg:hidden
 }
 .burger-nav {
   @apply text-left hover:pl-[12px] 
@@ -31,7 +27,6 @@
 .user-nav {
   @apply text-right hover:pr-[12px]
 }
-
 .dropdownActive {
   @apply flex 
 }

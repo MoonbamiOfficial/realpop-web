@@ -2,16 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* FOOTER SECTION */
 li {
   @apply list-none
 }
-/* Footer nav */
 .footer-nav {
   @apply text-left font-[500px] w-[100px] capitalize bg-transparent rounded-[4px] hover:bg-electric-pink hover:pl-[12px] transition-all
 }
-
-/* Socmed */
 .socmed, li {
   @apply hover:text-electric-pink transition-all cursor-pointer
 }
-
