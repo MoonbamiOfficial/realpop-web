@@ -40,7 +40,7 @@ const Footer = () => {
                 <h2 className="text-[1.25rem] font-[700] capitalize sm:text-[1.5rem] lg:text-[1.8rem]">Follow Us</h2>
                 <div className="socmeds ">
                   <div className="chris-section flex flex-col gap-y-[8px] pb-2">
-                    <p className="cursor-pointer text-electric-pink font-semibold">Chris</p>
+                    <p className="cursor-pointer font-semibold">Chris</p>
                     <hr />
                     <Link to="https://www.facebook.com/chrsdrl" target="_blank" className="socmed flex items-center gap-x-[8px]">
                       <div className=""><i className="fa-brands fa-facebook"></i></div>
@@ -56,7 +56,7 @@ const Footer = () => {
                     </Link>
                   </div>
                   <div className="jam-section flex flex-col gap-y-[8px] pb-2">
-                    <p className="cursor-pointer text-electric-pink font-semibold">Jam</p>
+                    <p className="cursor-pointer font-semibold">Jam</p>
                     <hr />
                     <Link to="https://www.facebook.com/MoonbamiOffcl" target="_blank" className="socmed flex items-center gap-x-[8px]">
                       <div className=""><i className="fa-brands fa-facebook"></i></div>
