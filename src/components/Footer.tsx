@@ -87,7 +87,7 @@ const Footer = () => {
             </div>
             <div className="copyright w-full text-center">
               <hr className=""/>
-              <p className="my-4">&copy; {new Date().getFullYear()} Realpop</p>
+              <p className="my-4 uppercase">&copy; {new Date().getFullYear()} Realpop</p>
             </div>
           </div>
       </footer>
