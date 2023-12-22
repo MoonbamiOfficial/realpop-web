@@ -1,30 +1,25 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 
+// Context
+import { UserContextProvider } from '../context/UserContext'
+
 // Components
 import Header from '../components/Header'
+import HomeBackground from '../components/bg/HomeBackground'
 
-// Assets
-import Girl_Groups_Video from '../assets/videos/bgvideo.mp4'
-
-type Props = {}
-
-const RootLayout = () => {
+const Layout = () => {
   return (
-    <div className="root-layout">
-      <Header />
-      <BgVideo />
-      <main>
-        <Outlet />
-      </main>
-    </div>
+    <>
+      <UserContextProvider>
+        <Header />
+        <HomeBackground />
+        <main>
+          <Outlet />
+        </main>
+      </UserContextProvider>
+    </>
   )
 }
 
-const BgVideo = () => {
-  return (
-    <video src={ Girl_Groups_Video } loop muted autoPlay className="absolute top-0 -z-[100] w-full h-full object-cover "></video>
-  )
-}
-
-export default RootLayout
+export default Layout
