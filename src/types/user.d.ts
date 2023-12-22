@@ -8,6 +8,9 @@ export type User = {
 export type UserContextType = {
   userTokens?: any
   user?: any
+  setUserTokens?: any
+  setUser?: any
+  signupUser?: any
   loginUser?: any
   logoutUser?: any
 }
