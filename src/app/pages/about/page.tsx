@@ -2,16 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 // Components
-import Background from '../../../components/bg/Background'
+import Background from '../../../components/bg/ShopBackground'
 import Footer from '../../../components/Footer'
 
 // Assets
 import Realpop from '../../../assets/images/realpop-socprev.png'
 import Realpop_Team from '../../../assets/images/founder-ceo.png'
 
-type Props = {}
-
-const About = (props: Props) => {
+const About = () => {
   return (
     <>
       <Background />
@@ -24,6 +22,9 @@ const About = (props: Props) => {
                 <h1 className="capitalize text-[2.5rem] font-[700] tracking-[-0.025rem]">About Realpop</h1>
                 <hr />
                 <p className="mt-2 w-[400px] md:w-[500px] lg:w-[600px]">Realpop loves K-Pop just as much as you do! Listening to your favorite K-Pop artists brings us a lot of happiness in our life, but it's a little expensive to support them, isn&apos;t it? Realpop hopes our buyers will be happy with the prices of our girl group photocards from the current girl groups available. These girl groups include the TWICE,  NMIXX, NewJeans, aespa and LESSERAFIM.</p>
+                <p className="mt-2 w-[400px] md:w-[500px] lg:w-[600px]">
+                  Realpop is an open-source ecommerce website developed by <Link to="https://github.com/MoonbamiOfficial" className="cursor-pointer hover:underline text-blue-400" target="_blank">MoonbamiOfficial</Link>. You can view the its GitHub repository <Link to="https://github.com/MoonbamiOfficial/realpop-web.git" target="_blank" className="cursor-pointer hover:underline text-blue-400">Here</Link>.
+                </p>
               </div>
             </div>
           </div>
