@@ -33,8 +33,6 @@ import LeSserafim from './pages/shop/le-sserafim/page'
 // Error Pages
 import NotFound from './pages/not-found/page'
 
-type Props = {}
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
