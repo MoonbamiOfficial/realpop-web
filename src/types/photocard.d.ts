@@ -1,4 +1,4 @@
-interface Photocard {
+export type Photocard = {
   id: number
   group: string
   image: string | undefined
@@ -6,9 +6,4 @@ interface Photocard {
   theme: string
   price: number
   is_liked: boolean
-}
-
-export type PhotocardContextType = {
-  photocards: Photocard[]
-  updatePhotocard: (id) => void
 }
