@@ -2,16 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 // Components
-import Background from '../../../components/bg/Background'
+import Background from '../../../components/bg/ShopBackground'
 import Footer from '../../../components/Footer'
 
 // Assets
 import Realpop_Logo from '../../assets/images/icon/realpop512x.png'
 import SendMessage from '../../../components/ui/SendMsgBtn'
 
-type Props = {}
-
-const Contact = (props: Props) => {
+const Contact = () => {
   return (
     <>
       <Background />
