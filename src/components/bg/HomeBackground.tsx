@@ -7,7 +7,7 @@ import { Background } from '../../types/background'
 import { useFetch } from '../../hooks/useFetch'
 
 // Components
-import BackgroundLoading from '../../components/BackgroundLoading'
+import HomeBackgroundLoading from '../HomeBackgroundLoading'
 
 type Props = {
   src?: string | undefined
@@ -20,7 +20,7 @@ const HomeBackground = () => {
   
   return (
     <>
-      {isLoading && <BackgroundLoading />}
+      {isLoading && <HomeBackgroundLoading />}
       {background.map((bg: Background) => <Video key={ bg.id } src={ bg.video } onCanPlay={() => setIsLoading(false)} />)}
     </>
   )
