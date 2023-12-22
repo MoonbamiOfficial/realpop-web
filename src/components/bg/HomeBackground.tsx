@@ -1,7 +1,7 @@
 import React, { ReactEventHandler, useState } from 'react'
 
 // Types
-import { Background } from '../../types/background'
+import { BackgroundVideo } from '../../types/backgroundVideo'
 
 // Hooks
 import { useFetch } from '../../hooks/useFetch'
@@ -21,7 +21,7 @@ const HomeBackground = () => {
   return (
     <>
       {isLoading && <HomeBackgroundLoading />}
-      {background.map((bg: Background) => <Video key={ bg.id } src={ bg.video } onCanPlay={() => setIsLoading(false)} />)}
+      {background.map((bg: BackgroundVideo) => <Video key={ bg.id } src={ bg.video } onCanPlay={() => setIsLoading(false)} />)}
     </>
   )
 }
