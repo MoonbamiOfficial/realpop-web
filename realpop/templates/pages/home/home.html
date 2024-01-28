@@ -1,0 +1,15 @@
+{% extends 'pages/index.html' %}
+{% load static tailwind_tags %}
+{% block content %}
+{% tailwind_css %}
+  <video src="../.././../static/assets/videos/realpop_bg.mp4" loop muted autoPlay class=" absolute top-0 -z-[100] w-full h-full object-cover "></video>
+  <div class="gradient fixed bottom-0 h-[70vh] w-screen -z-[100] "></div>
+  <section id="home" class="container mx-auto relative h-[550px] px-8 mt-[300px] flex justify-between items-center lg:mt-[200px] 2xl:px-52 transition-all ">
+    <div class=" w-[400px] flex flex-col items-end gap-y-[50px] sm:w-[500px] lg:w-[600px] lg:mx-0  premium:w-[700px]  ">
+      <div class="text relative flex flex-col justify-end gap-y-[8px]">
+        <h1 class="title text-[2.5rem] font-[700] w-[400px] leading-[3rem] tracking-tight sm:w-[500px] sm:text-[3.125rem] sm:leading-[3.75rem] md:text-[4rem] md:leading-[4.8rem] lg:w-[600px] 2xl:text-[4.875rem] 2xl:leading-[5.85rem] premium:w-[700px] premium:text-[6rem] premium:leading-[7.2rem] transition-all">Realpop</h1>
+        <p class="w-[400px] leading-[1.4rem] sm:w-[500px] md:text-[1.15rem] lg:text-[1.25rem] lg:leading-[1.75rem] premium:w-[600px] premium:text-[1.5rem] premium:leading-[2.1rem]">Start collecting your favorite photocards from our currently available girl groups; TWICE, NMIXX, NewJeans, aespa & LE SSERAFIM</p>
+      </div>
+    <a href="/shop" id="shop-now-btn" class="w-[300px] h-[80px] flex justify-center items-center text-[1.25rem] font-[500] uppercase bg-electric-pink rounded-[80px] outline-0 border-0 hover:drop-shadow-shop-now-btn transition-all">Shop Now</a>
+  </div>
+{% endblock content %}
