@@ -1,0 +1,158 @@
+{% extends 'index.html' %}
+{% load static tailwind_tags %}
+{% block content %}
+{% tailwind_css %}
+  <section class="container mt-[60px] py-[100px] h-full relative flex flex-col gap-y-[50px]">
+    <div class="about-realpop relative flex flex-col items-center">
+      <img src="../../../../static/assets/images/realpop-socprev.png" alt="Realpop Social Preview" class="z-10 w-[400px] h-[200px] rounded-[32px] sm:w-[450px] sm:h-[225px] md:w-[500px] md:h-[250px] lg:w-[600px] lg:h-[300px]" />
+      <div class="text-bg pb-[75px] mt-[-75px] flex flex-col items-center bg-opaque-black w-[450px] rounded-[32px] sm:w-[550px] md:w-[650px] lg:w-[700px]">
+        <div class="text-holder mt-[100px] w-[400px] gap-y-[8px] md:w-[500px] lg:w-[600px]">
+          <h1 class="capitalize text-[2.5rem] font-[700] tracking-[-0.025rem]">About Realpop</h1>
+          <hr />
+          <p class="mt-2 w-[400px] md:w-[500px] lg:w-[600px]">Realpop loves K-Pop just as much as you do! Listening to your favorite K-Pop artists brings us a lot of happiness in our life, but it's a little expensive to support them, isn&apos;t it? Realpop hopes our buyers will be happy with the prices of our girl group photocards from the current girl groups available. These girl groups include the TWICE,  NMIXX, NewJeans, aespa and LESSERAFIM.</p>
+          <p class="mt-2 w-[400px] md:w-[500px] lg:w-[600px]">
+            
+          </p>
+          <p class="mt-2 w-[400px] md:w-[500px] lg:w-[600px]">
+            <span class="text-electric-pink font-bold">NOTE</span>
+            : Realpop is an open-source <span class="italic text-electric-pink">simulation-ecommerce website</span> developed by <a href="https://github.com/MoonbamiOfficial" class="cursor-pointer hover:underline text-blue-400" target="_blank">Moonbami</a> that uses <a href="https://www.djangoproject.com/" class="cursor-pointer hover:underline text-green-700 font-semibold" target="_blank">Django</a> as its main technology. This is still under development of the features that an ecommerce must have. Due to the developer having strict schedules, features may took time to be implemented. If you have by any chance have time and want to help to develop this project as a hobby, please contact the developer <a href="/contact" class="cursor-pointer hover:underline text-blue-400">here.</a>
+          </p>
+          <br />
+          You can view the GitHub repository <a href="https://github.com/MoonbamiOfficial/realpop-web.git" target="_blank" class="cursor-pointer hover:underline text-blue-400">Here</a>. <br>
+          <span class="font-bold">Thank you for your deeply understanding. — <span class="italic">Moonbami</span></span>
+        </div>
+      </div>
+    </div>
+    <div class="about-us relative flex flex-col items-center ">
+      <div class="z-10 relative ">
+        <img src="../../../../static/assets/images/founder-ceo.png" alt="Realpop Team" class="z-10 w-[400px] h-[200px] rounded-[32px] sm:w-[450px] sm:h-[225px] md:w-[500px] md:h-[250px] lg:w-[600px] lg:h-[300px]" />
+        <div class="names absolute top-0 flex w-full justify-around bg-opaque-black rounded-t-[32px] text-[1.25rem]">
+          <h1>Chris</h1>
+          <h1>Moonbami</h1>
+        </div>
+      </div>
+      <div class="text-bg pb-[75px] mt-[-75px] flex flex-col items-center bg-opaque-black w-[450px] rounded-[32px] sm:w-[550px] md:w-[650px] lg:w-[700px]">
+        <div class="text-holder mt-[100px] w-[400px] gap-y-[8px] md:w-[500px] lg:w-[600px]">
+          <h1 class="capitalize text-[2.5rem] font-[700] tracking-[-0.025rem]">About Us</h1>
+          <hr />
+          <p class="mt-2 w-[400px] md:w-[500px] lg:w-[600px]">My friend (Chris) and I really love K-Pop especially one of the most popular girl group called TWICE. One day, my instructor decided that my section have to create  project about creating a website. I immediately think about developing my own ecommerce website. That&apos;s why I talked to my friend and asked him to be my client for the website that I want to develop. Together, we created the Realpop for the K-Pop fans around the world as our benificiaries.</p>
+        </div>
+      </div>
+    </div>
+    <div class="credits relative flex flex-col items-center">
+      <img src="../../../../static/assets/images/realpop-socprev.png" alt="Realpop Team" class="z-10 w-[400px] h-[200px] rounded-[32px] sm:w-[450px] sm:h-[225px] md:w-[500px] md:h-[250px] lg:w-[600px] lg:h-[300px]" />
+      <div class="text-bg pb-[75px] mt-[-75px] flex flex-col items-center bg-opaque-black w-[450px] rounded-[32px] sm:w-[550px] md:w-[650px] lg:w-[700px]">
+        <div class="text-holder mt-[100px] w-[400px] gap-y-[8px] md:w-[500px] lg:w-[600px]">
+          <h1 class="capitalize text-[2.5rem] font-[700] tracking-[-0.025rem]">Credits</h1>
+          <hr />
+          <div class="credits-holder flex flex-col gap-y-[12px] ">
+            <h2 class="mt-2">Videos:</h2>
+            <p class="w-[400px]"><span class="text-electric-pink">●</span> JYP Entertainment. (2021, Jun 9). TWICE "Alcohol-Free" M/V [Video]. YouTube.&nbsp;
+              <a href="https://youtu.be/XA2YEHn-A8Q?si=NjgKGzcEvwKsWjkT" class="cursor-pointer underline text-blue-400" target="_blank">https://youtu.be/XA2YEHn-A8Q?si=NjgKGzcEvwKsWjkT</a>
+            </p>
+            <p class=""><span class="text-electric-pink">●</span> JYP Entertainment. (2023, Jul 11). NMIXX "Party O&apos;Clock" M/V [Video]. YouTube.&nbsp;
+              <a href="https://youtu.be/Rd2wppggYxo?si=V2UK5-bSfOQd5l3H" class="cursor-pointer underline text-blue-400" target="_blank">https://youtu.be/Rd2wppggYxo?si=V2UK5-bSfOQd5l3H</a>
+            </p>
+            <p class=""><span class="text-electric-pink">●</span> HYBE LABELS. (2023, Jul 7). NewJeans (뉴진스) 'Super Shy' Official MV [Video]. YouTube.&nbsp;
+              <a href="https://youtu.be/ArmDp-zijuc?si=7OfACNATmgY_RPhG" class="cursor-pointer underline text-blue-400" target="_blank">https://youtu.be/ArmDp-zijuc?si=7OfACNATmgY_RPhG</a>
+            </p>
+            <p class=""><span class="text-electric-pink">●</span> SMhrefWN. (2023, May 8). aespa 에스파 'Spicy' MV [Video]. YouTube.&nbsp;
+              <a href="https://youtu.be/Os_heh8vPfs?si=ynCR3jGJ1tc9KB0R" class="cursor-pointer underline text-blue-400" target="_blank">https://youtu.be/Os_heh8vPfs?si=ynCR3jGJ1tc9KB0R</a>
+            </p>
+            <p class=""><span class="text-electric-pink">●</span> HYBE LABELS. (2023, May 1). LE SSERAFIM (르세라핌) 'UNFORGIVEN (feat. Nile Rodgers)' OFFICIAL M/V [Video]. YouTube.&nbsp;
+              <a href="https://youtu.be/UBURTj20HXI?si=SjrgL7wcMiV6BMfb" class="cursor-pointer underline text-blue-400" target="_blank">https://youtu.be/UBURTj20HXI?si=SjrgL7wcMiV6BMfb</a>
+            </p>
+            <p class=""><span class="text-electric-pink">●</span> JYP Entertainment. (2017, Dec 11). TWICE "Heart Shaker" M/V [Video]. YouTube.&nbsp;
+              <a href="https://youtu.be/rRzxEiBLQCA?si=t0yNbbjAWo_tW_Uu" class="cursor-pointer underline text-blue-400" target="_blank">https://youtu.be/rRzxEiBLQCA?si=t0yNbbjAWo_tW_Uu</a>
+            </p>
+            <p class=""><span class="text-electric-pink">●</span> JYP Entertainment. (2022, Sep 19). NMIXX "DICE" M/V [Video]. YouTube.&nbsp;
+              <a href="https://youtu.be/p1bjnyDqI9k?si=JXIxHw838_H5URhz" class="cursor-pointer underline text-blue-400" target="_blank">https://youtu.be/p1bjnyDqI9k?si=JXIxHw838_H5URhz</a>
+            </p>
+            <p class=""><span class="text-electric-pink">●</span> HYBE LABELS. (2023, Jan 3). NewJeans (뉴진스) 'OMG' Official MV (Performance ver.1) [Video]. YouTube.&nbsp;
+              <a href="https://youtu.be/sVTy_wmn5SU?si=sYhANjSzGV6IhslZ" class="cursor-pointer underline text-blue-400" target="_blank">https://youtu.be/sVTy_wmn5SU?si=sYhANjSzGV6IhslZ</a>
+            </p>
+            <p class=""><span class="text-electric-pink">●</span> HYBE LABELS. (2022, Oct 16). LE SSERAFIM (르세라핌) 'ANTIFRAGILE' OFFICIAL M/V [Video]. YouTube.&nbsp;
+              <a href="https://youtu.be/pyf8cbqyfPs?si=uB4a4usdZLPq3bPP" class="cursor-pointer underline text-blue-400" target="_blank">https://youtu.be/pyf8cbqyfPs?si=uB4a4usdZLPq3bPP</a>
+            </p>
+            <hr />
+            <h2>Assets:</h2>
+            <p class=""><span class="text-electric-pink">●</span><a href="https://www.flaticon.com/free-icons/hand-heart" class="cursor-pointer underline text-blue-400" target="_blank">Hand-heart icons</a> created by kerismaker - Flaticon&nbsp;
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="container border-t-[8px] border-electric-pink bg-opaque-black z-[70] relative bottom-0 w-full px-[15px] sm:px-[25px] md:px-[50px] lg:px-[75px] xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
+    <div class="footer-full-content relative py-[50px] flex flex-col items-center gap-y-[80px]">
+      <h1 class="brand flex items-center gap-x-[8px] text-[2rem] font-[700] capitalize sm:text-[2.5rem] sm:gap-x-[12px] lg:text-[3rem] xl:text-[3.5rem] premium:text-[4rem]">
+        <img src="../../../static/assets/images/realpop-logo.png" alt="Realpop Logo" class="w-[60px] h-[60px] select-none sm:w-[70px] sm:h-[70px] lg:w-[80px] lg:h-[80px] xl:w-[90px] xl:h-[90px]" />
+        Realpop
+      </h1>
+      <div class="content flex justify-between w-full">
+        <div class="navigate flex flex-col gap-y-[16px]">
+          <h2 class="text-[1.25rem] font-[700] capitalize sm:text-[1.5rem] lg:text-[1.8rem]">Navigate</h2>
+          <div class="as flex flex-col gap-y-[8px]">
+            <a href="/" class="footer-nav" >Home</a>
+            <a href="/about" class="footer-nav" >About</a>
+            <a href="/shop" class="footer-nav" >Shop</a>
+            <a href="/contact" class="footer-nav" >Contact</a>
+            <a href="/help" class="footer-nav" >Help</a>
+          </div>
+        </div>
+        <div class="follow-us flex flex-col gap-y-[16px]">
+          <h2 class="text-[1.25rem] font-[700] capitalize sm:text-[1.5rem] lg:text-[1.8rem]">Follow Us</h2>
+          <div class="socmeds ">
+            <div class="chris-section flex flex-col gap-y-[8px] pb-2">
+              <p class="cursor-pointer font-semibold">Chris</p>
+              <hr />
+              <a href="https://www.facebook.com/chrsdrl" target="_blank" class="socmed flex items-center gap-x-[8px]">
+                <div class=""><i class="fa-brands fa-facebook"></i></div>
+                <p>chrsdrl</p>
+              </a>
+              <a href="https://www.instagram.com/lakezeus_/" target="_blank" class="socmed flex items-center gap-x-[8px]">
+                <div class=""><i class="fa-brands fa-instagram"></i></div>
+                <p>lakezeus_</p>
+              </a>
+              <a href="https://github.com/zyozyoo" target="_blank" class="socmed flex items-center gap-x-[8px]">
+                <div class=""><i class="fa-brands fa-github"></i></div>
+                <p>zyozyoo</p>
+              </a>
+            </div>
+            <div class="jam-section flex flex-col gap-y-[8px] pb-2">
+              <p class="cursor-pointer font-semibold">Jam</p>
+              <hr />
+              <a href="https://www.facebook.com/MoonbamiOffcl" target="_blank" class="socmed flex items-center gap-x-[8px]">
+                <div class=""><i class="fa-brands fa-facebook"></i></div>
+                <p>MoonbamiOffcl</p>
+              </a>
+              <a href="https://www.instagram.com/moonbamidesu/" target="_blank" class="socmed flex items-center gap-x-[8px]">
+                <div class=""><i class="fa-brands fa-instagram"></i></div>
+                <p>moonbamidesu</p>
+              </a>
+              <a href="https://github.com/MoonbamiOfficial" target="_blank" class="socmed flex items-center gap-x-[8px]">
+                <div class=""><i class="fa-brands fa-github"></i></div>
+                <p>MoonbamiOfficial</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="navigate flex flex-col gap-y-[16px]">
+          <h2 class="text-[1.25rem] font-[700] capitalize sm:text-[1.5rem] lg:text-[1.8rem]">Photocards</h2>
+          <div class="as flex flex-col gap-y-[8px] list-none">
+            <li>TWICE</li>
+            <li>NMIXX</li>
+            <li>NewJeans</li>
+            <li>aespa</li>
+            <li>LE SSERAFIM</li>
+          </div>
+        </div>
+      </div>
+      <div class="copyright w-full text-center">
+        <hr class=""/>
+        <p class=" my-4 uppercase">&copy; <span class="footer-date"></span> Realpop from moonbami & jively</p>
+      </div>
+    </div>
+  </footer>
+{% endblock content %}
