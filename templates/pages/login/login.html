@@ -8,30 +8,18 @@
     {% for message in messages %}
       <p class="capitalize text-xl font-medium">{{message}}</p>
     {% endfor %}
-    <div class="login-section">
       <form method="POST" class="flex flex-col gap-4 ">
         {% csrf_token %}
-        <label for="username" class="capitalize cursor-pointer ">
-          <p class="capitalize">username</p>
-          <input id="username" type="username" name="username" placeholder="username" required autoComplete='true' class="relative focus:outline-electric-pink border-none text-black w-[250px] h-[40px] outline-none rounded-lg text-xs placeholder:text-xs placeholder:capitalize px-4 py-2 xl:w-[300px]" />
-        </label>
-        <label for="password" class="capitalize cursor-pointer ">
-          <p class="capitalize">password</p>
-          <input id="password" type="password" name="password" placeholder="password" required autoComplete='true' class="relative focus:outline-electric-pink border-none text-black w-[250px] h-[40px] outline-none rounded-lg text-xs placeholder:text-xs placeholder:capitalize px-4 py-2 xl:w-[300px]" />
-        </label>
-        <div class="forgot flex justify-end ">
-          <a href="/" class="hover:underline " >Forgot Password?</a>
-        </div>
+          <label for="username" class="capitalize cursor-pointer ">
+            <p class="capitalize">username</p>
+            <input id="username" type="username" name="username" placeholder="username" required autoComplete='true' class="relative focus:outline-electric-pink border-none text-black w-[250px] h-[40px] outline-none rounded-lg text-xs placeholder:text-xs placeholder:capitalize px-4 py-2 xl:w-[300px]" />
+          </label>
+          <label for="password" class="capitalize cursor-pointer ">
+            <p class="capitalize">password</p>
+            <input id="password" type="password" name="password" placeholder="password" required autoComplete='true' class="relative focus:outline-electric-pink border-none text-black w-[250px] h-[40px] outline-none rounded-lg text-xs placeholder:text-xs placeholder:capitalize px-4 py-2 xl:w-[300px]" />
+          </label>
         <button id="login-btn" type="submit" class="w-[250px] h-[40px] bg-electric-pink rounded-lg text-base capitalize xl:w-[300px] ">login</button>
       </form>
-    </div>
-    <!-- <div class="login-with flex flex-col items-center gap-y-[10px]">
-      <div id="or" class="flex items-center select-none ">
-        <hr class="w-[100px] xl:w-[140px]"/>
-        <p class="p-2 uppercase bg-opaque-white rounded-xl text-xs">or</p>
-        <hr class="w-[100px] xl:w-[140px]"/>
-      </div>
-    </div> -->
     <p class="capitalize font-medium">don&apos;t have an account? <a href="{% url 'signup' %}" class="text-electric-pink hover:underline font-semibold">sign-up!</a></p>
     </section>
   </section>
