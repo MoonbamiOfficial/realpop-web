@@ -131,7 +131,6 @@
     if(user != 'AnonymousUser') document.querySelector('#user-info').textContent = ''
 
     const submitData = () => {
-      console.log('Payed!')
       const userData = {
         'name': null,
         'email': null,
@@ -162,7 +161,6 @@
       })
       .then((response) => response.json())
       .then((data) => {
-        console.log('Success: ', data)
         alert('Order Successful!')
         cart = {}
         document.cookie = 'cart=' + JSON.stringify(cart) + ";domain=;path=/"
