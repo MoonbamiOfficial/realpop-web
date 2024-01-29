@@ -27,6 +27,10 @@ body {
 li {
   @apply list-none
 }
+#id_name, #id_group, #id_theme {
+  background-color: transparent !important;
+  border: transparent !important;
+}
 .gradient {
   background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.75) 49.06%, rgba(0, 0, 0, 0.50) 74.48%, rgba(0, 0, 0, 0.00) 100.05%);
 }
