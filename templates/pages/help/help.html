@@ -1,0 +1,109 @@
+{% extends 'index.html' %}
+{% load static tailwind_tags %}
+{% block content %}
+{% tailwind_css %}
+  <section id="help" class="container mx-auto mt-[60px] py-[100px] h-full px-[15px] sm:px-[25px] md:px-[50px] lg:px-[75px] lg:flex-row xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
+    <div class="realpop-team bg-black px-[32px] py-[64px]">
+      <h1 class="capitalize text-[2.50rem] font-[700] mb-5">FAQ</h1>
+      <div class="team-box grid grid-cols-1 gap-[50px]">
+        <div class="questions flex flex-col gap-y-[32px] pb-2">
+          <hr />
+          <div class="question-one">
+            <h1 class="text-[1.5rem]">1. How can I pay for my photocards?</h1>
+            <p class="answer"><span class="font-[700] text-electric-pink">Answer:</span> You can pay by using Paypal or COD method through a simulation perspective.</p>
+          </div>
+          <div class="question-two">
+            <h1 class="text-[1.5rem]">2. What countries do you ship to?</h1>
+            <p class="answer"><span class="font-[700] text-electric-pink">Answer:</span> We're currently only available to ship through simulation perspective in Philippines, Luzon so far.</p>
+          </div>
+          <div class="question-three">
+            <h1 class="text-[1.5rem]">3. How long will it take to get my order?</h1>
+            <p class="answer"><span class="font-[700] text-electric-pink">Answer:</span> It'will depend on the current status of the country and the road.</p>
+          </div>
+          <div class="question-four">
+            <h1 class="text-[1.5rem]">4. What payment methods do you accept?</h1>
+            <p class="answer"><span class="font-[700] text-electric-pink">Answer:</span> We're currently accepting Paypal or COD.</p>
+          </div>
+          <div class="question-five">
+            <h1 class="text-[1.5rem]">5. How do I cancel/modify an order?</h1>
+            <p class="answer"><span class="font-[700] text-electric-pink">Answer:</span> Since this is just a simulation of an ecommerce, there's no need to worry about it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FOOTER -->
+
+  <footer class="container border-t-[8px] border-electric-pink bg-opaque-black z-[70] relative bottom-0 w-full px-[15px] sm:px-[25px] md:px-[50px] lg:px-[75px] xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
+    <div class="footer-full-content relative py-[50px] flex flex-col items-center gap-y-[80px]">
+      <h1 class="brand flex items-center gap-x-[8px] text-[2rem] font-[700] capitalize sm:text-[2.5rem] sm:gap-x-[12px] lg:text-[3rem] xl:text-[3.5rem] premium:text-[4rem]">
+        <img src="../../../static/assets/images/realpop-logo.png" alt="Realpop Logo" class="w-[60px] h-[60px] select-none sm:w-[70px] sm:h-[70px] lg:w-[80px] lg:h-[80px] xl:w-[90px] xl:h-[90px]" />
+        Realpop
+      </h1>
+      <div class="content flex justify-between w-full">
+        <div class="navigate flex flex-col gap-y-[16px]">
+          <h2 class="text-[1.25rem] font-[700] capitalize sm:text-[1.5rem] lg:text-[1.8rem]">Navigate</h2>
+          <div class="links flex flex-col gap-y-[8px]">
+            <a href="/" class="footer-nav" >Home</a>
+            <a href="/about" class="footer-nav" >About</a>
+            <a href="/shop" class="footer-nav" >Shop</a>
+            <a href="/contact" class="footer-nav" >Contact</a>
+            <a href="/help" class="footer-nav" >Help</a>
+          </div>
+        </div>
+        <div class="follow-us flex flex-col gap-y-[16px]">
+          <h2 class="text-[1.25rem] font-[700] capitalize sm:text-[1.5rem] lg:text-[1.8rem]">Follow Us</h2>
+          <div class="socmeds ">
+            <div class="chris-section flex flex-col gap-y-[8px] pb-2">
+              <p class="cursor-pointer font-semibold">Chris</p>
+              <hr />
+              <a href="https://www.facebook.com/chrsdrl" target="_blank" class="socmed flex items-center gap-x-[8px]">
+                <div class=""><i class="fa-brands fa-facebook"></i></div>
+                <p>chrsdrl</p>
+              </a>
+              <a href="https://www.instagram.com/lakezeus_/" target="_blank" class="socmed flex items-center gap-x-[8px]">
+                <div class=""><i class="fa-brands fa-instagram"></i></div>
+                <p>lakezeus_</p>
+              </a>
+              <a href="https://github.com/zyozyoo" target="_blank" class="socmed flex items-center gap-x-[8px]">
+                <div class=""><i class="fa-brands fa-github"></i></div>
+                <p>zyozyoo</p>
+              </a>
+            </div>
+            <div class="jam-section flex flex-col gap-y-[8px] pb-2">
+              <p class="cursor-pointer font-semibold">Moonbami</p>
+              <hr />
+              <a href="https://www.facebook.com/MoonbamiOffcl" target="_blank" class="socmed flex items-center gap-x-[8px]">
+                <div class=""><i class="fa-brands fa-facebook"></i></div>
+                <p>MoonbamiOffcl</p>
+              </a>
+              <a href="https://www.instagram.com/moonbamidesu/" target="_blank" class="socmed flex items-center gap-x-[8px]">
+                <div class=""><i class="fa-brands fa-instagram"></i></div>
+                <p>moonbamidesu</p>
+              </a>
+              <a href="https://github.com/MoonbamiOfficial" target="_blank" class="socmed flex items-center gap-x-[8px]">
+                <div class=""><i class="fa-brands fa-github"></i></div>
+                <p>MoonbamiOfficial</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="navigate flex flex-col gap-y-[16px]">
+          <h2 class="text-[1.25rem] font-[700] capitalize sm:text-[1.5rem] lg:text-[1.8rem]">Photocards</h2>
+          <div class="links flex flex-col gap-y-[8px] list-none">
+            <li>TWICE</li>
+            <li>NMIXX</li>
+            <li>NewJeans</li>
+            <li>aespa</li>
+            <li>LE SSERAFIM</li>
+          </div>
+        </div>
+      </div>
+      <div class="copyright w-full text-center">
+        <hr class=""/>
+        <p class=" my-4 uppercase">&copy; <span class="footer-date"></span> Realpop from moonbami & jively</p>
+      </div>
+    </div>
+  </footer>
+{% endblock content %}

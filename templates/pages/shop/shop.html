@@ -1,42 +1,48 @@
-{% extends 'pages/index.html' %}
+{% extends 'index.html' %}
 {% load static tailwind_tags %}
 {% block content %}
 {% tailwind_css %}
-  <section id="login" class="relative container mx-auto mt-[60px] py-[100px] h-full flex flex-col items-center ">
-    <section class="relative flex flex-col items-center gap-y-[30px] text-sm p-10 border border-opaque-white bg-transparent backdrop-blur-xl shadow-lg rounded-xl transition-all">
-    <h1 class="capitalize text-4xl font-semibold">Login</h1>
-    {% for message in messages %}
-      <p class="capitalize text-xl font-medium">{{message}}</p>
-    {% endfor %}
-    <div class="login-section">
-      <form method="POST" class="flex flex-col gap-4 ">
-        {% csrf_token %}
-        <label for="username" class="capitalize cursor-pointer ">
-          <p class="capitalize">username</p>
-          <input id="username" type="username" name="username" placeholder="username" required autoComplete='true' class="relative focus:outline-electric-pink border-none text-black w-[250px] h-[40px] outline-none rounded-lg text-xs placeholder:text-xs placeholder:capitalize px-4 py-2 xl:w-[300px]" />
-        </label>
-        <label for="password" class="capitalize cursor-pointer ">
-          <p class="capitalize">password</p>
-          <input id="password" type="password" name="password" placeholder="password" required autoComplete='true' class="relative focus:outline-electric-pink border-none text-black w-[250px] h-[40px] outline-none rounded-lg text-xs placeholder:text-xs placeholder:capitalize px-4 py-2 xl:w-[300px]" />
-        </label>
-        <div class="forgot flex justify-end ">
-          <a href="/" class="hover:underline " >Forgot Password?</a>
-        </div>
-        <button id="login-btn" type="submit" class="w-[250px] h-[40px] bg-electric-pink rounded-lg text-base capitalize xl:w-[300px] ">login</button>
+  <div class="shop-header sticky top-[60px] z-[80] w-full flex justify-evenly items-center flex-wrap mt-[60px] justify-rounded py-4 px-[40px] gap-y-[16px] bg-black ">
+    <div class="right flex items-center">
+      <form class="search flex items-center gap-2 rounded-md border-2 px-2 border-gray-300 focus-within:border-electric-pink ">
+        {{searchFilter.form}}
+        <!-- <input type="search" id="search" name="search" id="search" placeholder="Search" class="px-4 py-2 bg-transparent border-transparent border-none outline-none outline-transparent w-[300px]"  /> -->
+        <button type="submit" class="w-[40px] h-[40px] cursor-pointer active:bg-electric-pink ">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
       </form>
     </div>
-    <!-- <div class="login-with flex flex-col items-center gap-y-[10px]">
-      <div id="or" class="flex items-center select-none ">
-        <hr class="w-[100px] xl:w-[140px]"/>
-        <p class="p-2 uppercase bg-opaque-white rounded-xl text-xs">or</p>
-        <hr class="w-[100px] xl:w-[140px]"/>
+  </div>
+  <section id="shop" class="container flex flex-col lg:flex-row gap-[50px] items-start px-8 2xl:px-[200px] pb-[300px] relative w-full h-full">
+    <section class=" w-full flex flex-col items-center">
+      <h1 class="capitalize ml-5 mr-auto text-[2.5rem] font-[900] mb-4 lg:mt-[50px] ">all</h1>
+      <hr class="w-full" />
+      <div id="shop-items" class="items grid grid-cols-2 gap-[10px] mt-[16px] sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 premium:grid-cols-9 ">
+        {% for photocard in photocards %}
+          <div class="photocard cursor-pointer overflow-hidden w-[150px] h-auto flex flex-col items-center gap-y-[10px] pb-2 bg-black rounded-sm hover:-translate-y-1 hover:shadow-sm hover:shadow-white transition-all">
+            <img src="{{photocard.imageURL}}" alt="photocard" class="photocard-image w-[150px] h-[150px] object-cover" />
+            <div class="photocard-details w-[150px] flex flex-col justify-between items-start gap-4 px-4">
+              <div class="right flex flex-col gap-y-[10px]">
+                <div class="name-theme">
+                  <h3 class="photocard-name font-bold w-[80px] truncate capitalize">{{photocard.name}}</h3>
+                  <h3 class="photocard-theme text-[12px] font-light w-[80px] italic truncate">{{photocard.theme}}</h3>
+                </div>
+                <p class="price text-electric-pink text-xs">
+                  <i class="fa-solid fa-peso-sign"></i> <span class="actual-price text-base">{{photocard.price}}</span>
+                </p>
+              </div>
+              <!-- <hr class="border-white w-full"> -->
+              <button data-photocard="{{photocard.id}}" data-action="add" class="update-cart ml-auto rounded bg-electric-pink border-transparent border p-2 text-xs capitalize transition-all" >
+                add to cart
+              </button>
+            </div>
+          </div>
+        {% endfor %}
       </div>
-    </div> -->
-    <p class="capitalize font-medium">don&apos;t have an account? <a href="{% url 'signup' %}" class="text-electric-pink hover:underline font-semibold">sign-up!</a></p>
     </section>
   </section>
 
-  <!-- FOOTER -->
+<!-- FOOTER -->
 
   <footer class="container border-t-[8px] border-electric-pink bg-opaque-black z-[70] relative bottom-0 w-full px-[15px] sm:px-[25px] md:px-[50px] lg:px-[75px] xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
     <div class="footer-full-content relative py-[50px] flex flex-col items-center gap-y-[80px]">
@@ -108,5 +114,5 @@
         <p class=" my-4 uppercase">&copy; <span class="footer-date"></span> Realpop from moonbami & jively</p>
       </div>
     </div>
-  </footer>
+</footer>
 {% endblock content %}

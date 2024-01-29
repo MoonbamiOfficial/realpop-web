@@ -39,10 +39,6 @@
         cart = {}
         document.cookie = 'cart=' + JSON.stringify(cart) + ";domain=;path=/"
       }
-
-      if(request.user == 'AnonymousUser') {
-        document.querySelector('.logout').innerHTML = 'Login'
-      }
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,12 +48,12 @@
   <body>
     <div class="top-0 fixed z-[100] h-[60px] w-full bg-black " ></div>
     <header class="container fixed left-[50%] translate-x-[-50%] top-0 z-[100] h-[60px] w-full flex justify-between items-center px-16 transition-all" >
-      <div class="flex items-center gap-10">
-        <a id="left" href="/" class=" flex items-center gap-x-[8px] w-[260px]">
+      <div class="flex items-center gap-2">
+        <a id="brand" href="/" class=" flex items-center gap-2 ">
           <img src="{% static 'assets/images/realpop-logo.png' %}" alt="Realpop Logo" class="w-[40px] h-[40px] block"/>
           <h1 href="/" class="text-[1.75rem] font-[700] capitalize block">Realpop</h1>
         </a>
-        <div id="mid" class="">
+        <div id="links" class="">
           <div class="main-nav-container flex gap-x-1">
             <a href="/" class="main-nav ">Home</a>
             <a href="/about" class="main-nav ">About</a>
@@ -67,7 +63,7 @@
           </div>
         </div>
       </div>
-      <div id="right" class=" flex justify-end items-center w-[260px] gap-5">
+      <div id="right" class=" flex justify-end items-center gap-5">
         <p class="capitalize">hello, <span class="font-semibold text-electric-pink">{{request.user}}</span></p>
         {% if request.user.is_authenticated %}
           <a href="{% url 'logout' %}" class="logout capitalize text-sm rounded-lg border border-electric-pink hover:bg-electric-pink px-4 py-2">
