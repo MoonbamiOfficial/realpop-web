@@ -21,13 +21,11 @@ function addCookieItem(id, action) {
 
     if(cart[id]['quantity'] <= 0) delete cart[id]
   }
-  console.log('Cart: ', cart)
   document.cookie = 'cart=' + JSON.stringify(cart) + ";domain=;path=/"
   location.reload()
 }
 
 function updateUserOrder(id, action) {
-  console.log('Logged in, please wait...');
   const url = '/update_item';
 
   fetch(url, {
@@ -45,7 +43,6 @@ function updateUserOrder(id, action) {
     return response.json()
   })
   .then((data) => {
-    console.log('Data: ', data)
     location.reload()
   })
 };
@@ -54,9 +51,7 @@ for (let i = 0; i < updateButtons.length; i++) {
   updateButtons[i].addEventListener('click', function() {
     const photocardId = this.dataset.photocard;
     const action = this.dataset.action;
-    console.log("Photocard ID: ", photocardId, "Action: ", action);
 
-    console.log('User: ', user);
     if(user == 'AnonymousUser') addCookieItem(photocardId, action);
     else updateUserOrder(photocardId, action);
   })
@@ -65,7 +60,5 @@ for (let i = 0; i < updateButtons.length; i++) {
 const items = document.querySelector('#cart-items')
 const checkoutBtn = document.querySelector('.checkout-btn')
 
-if(!items.querySelector('#cart-item')) {
-  checkoutBtn.classList.add('hidden')
-}
+if(!items) checkoutBtn.classList.add('hidden')
   
