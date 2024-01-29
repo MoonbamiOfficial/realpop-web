@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* VARIABLES */
+:root {
+  /* rgb */
+  --electric-pink: 251, 37, 118;
+  --deep-violet: 63, 0, 113;
+  --cetacean-blue: 21, 0, 80;
+  --black: 0, 0, 0;
+  --white: 255, 255, 255;
+
+  /* hex */
+  --hex-electric-pink: #FB2576;
+}
+
+/* DEFAULTS */
+*,
+::before,
+::after {
+  @apply box-border p-0 m-0 transition-all
+}
+body {
+  @apply bg-cetacean-blue font-[Poppins] text-white
+}
+li {
+  @apply list-none
+}
+.gradient {
+  background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.75) 49.06%, rgba(0, 0, 0, 0.50) 74.48%, rgba(0, 0, 0, 0.00) 100.05%);
+}
+
+/* UTILITIES */
+/* .container {
+  @apply border border-white
+} */
+
+/* HEADER */
+.link {
+  @apply w-[100px] h-[50px] flex items-center justify-center
+}
+.user-btn {
+  @apply w-[50px] h-[50px] text-[20px] sm:text-[24px] md:text-[28px]
+}
+.main-nav {
+  @apply text-center text-sm font-[500] w-[100px] rounded-[4px] hover:bg-electric-pink capitalize
+}
+.main-nav, .user-cart {
+  padding: 6px 0 !important;
+}
+.dropdown {
+  @apply font-[500px] w-[100px] py-1 text-[12px] capitalize bg-transparent rounded-[4px] hover:bg-electric-pink lg:text-base sm:w-[125px] md:w-[150px] 
+}
+.dropdown-bg {
+  @apply z-[90] fixed top-[60px] w-full h-[200px] bg-opaque-black border-electric-pink border-b-[3px] sm:h-[230px] md:h-[260px] lg:hidden
+}
+.burger-nav {
+  @apply text-left hover:pl-[12px] 
+}
+.user-nav {
+  @apply text-right hover:pr-[12px]
+}
+
+/* FOOTER */
+.footer-nav {
+  @apply text-left font-[500px] w-[100px] capitalize bg-transparent rounded-[4px] hover:bg-electric-pink hover:pl-[12px]
+}
+.socmed, li {
+  @apply hover:text-electric-pink cursor-pointer
+}
+
+/* SHOP */
+.shop-link {
+  @apply hover:text-electric-pink
+}
