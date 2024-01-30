@@ -1,0 +1,39 @@
+#help {
+  margin-top: 60px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  height: 100%;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+.help-bg {
+  background-color: black;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.faq {
+  text-transform: capitalize;
+  font-size: 2.50rem/* 40px */;
+  font-weight: 700;
+  margin-bottom: 1.25rem/* 20px */;
+}
+.help-box {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 50px;
+}
+.questions {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  padding-bottom: 0.5rem/* 8px */;
+}
+.question {
+  font-size: 1.5rem/* 24px */;
+}
+.answer-span {
+  font-weight: 700;
+  color: var(--electric-pink);
+}

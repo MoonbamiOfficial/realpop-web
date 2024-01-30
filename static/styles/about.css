@@ -1,0 +1,111 @@
+#about {
+  margin-top: 60px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.about-topic {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image-socprev {
+  z-index: 10;
+  height: 300px;
+  width: 600px;
+  border-radius: 32px;
+}
+.text-bg {
+  padding-bottom: 75px;
+  width: 700px;
+  border-radius: 32px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -75px;
+}
+.text-holder {
+  margin-top: 100px;
+  width: 600px;
+  row-gap: 8px;
+
+}
+.about-title {
+  text-transform: capitalize;
+  font-size: 2.5rem/* 40px */;
+  font-weight: 700;
+  letter-spacing: -0.025rem/* -0.4px */;
+}
+.about-desc {
+  margin-top: 0.5rem/* 8px */;
+  width: 600px;
+}
+.note {
+  color: var(--electric-pink);
+  font-weight: 700;
+}
+.sew {
+  font-style: italic;
+  color: var(--electric-pink);
+}
+.about-link {
+  color: rgb(96 165 250);
+  cursor: pointer;
+}
+.django {
+  color: rgb(21 128 61);
+  cursor: pointer;
+  font-weight: 600;
+}
+.about-link:hover, .django:hover {
+  text-decoration-line: underline;
+}
+.about-thanks {
+  font-weight: 700;
+}
+.about-moonbami {
+  font-style: italic;
+}
+.about-names-holder {
+  z-index: 10;
+  position: relative;
+}
+.about-names {
+  position: absolute;
+  top: 0px;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top-left-radius: 32px;
+  border-top-right-radius: 32px;
+  font-size: 1.25rem/* 20px */;
+}
+.credits {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.credits-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.videos-about {
+  margin-top: 0.5rem/* 8px */;
+}
+.about-dot {
+  color: var(--electric-pink);
+}
+.credits-link {
+  cursor: pointer;
+  text-decoration-line: underline;
+  color: rgb(96 165 250)
+}

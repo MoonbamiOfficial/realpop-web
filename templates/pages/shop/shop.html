@@ -1,38 +1,35 @@
 {% extends 'index.html' %}
-{% load static tailwind_tags %}
+{% load static %}
 {% block content %}
-{% tailwind_css %}
-  <div class="shop-header sticky top-[60px] z-[80] w-full flex justify-evenly items-center flex-wrap mt-[60px] justify-rounded py-4 px-[40px] gap-y-[16px] bg-black ">
-    <div class="right flex items-center">
-      <form class="search flex items-center gap-2 rounded-md border-2 px-2 border-gray-300 focus-within:border-electric-pink ">
+  <div class="shop-header">
+    <div class="search-holder">
+      <form class="search">
         {{searchFilter.form}}
-        <!-- <input type="search" id="search" name="search" id="search" placeholder="Search" class="px-4 py-2 bg-transparent border-transparent border-none outline-none outline-transparent w-[300px]"  /> -->
-        <button type="submit" class="w-[40px] h-[40px] cursor-pointer active:bg-electric-pink ">
+        <button type="submit" class="search-btn">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
     </div>
   </div>
-  <section id="shop" class="container flex flex-col lg:flex-row gap-[50px] items-start px-8 2xl:px-[200px] pb-[300px] relative w-full h-full">
-    <section class=" w-full flex flex-col items-center">
-      <h1 class="capitalize ml-5 mr-auto text-[2.5rem] font-[900] mb-4 lg:mt-[50px] ">all</h1>
-      <hr class="w-full" />
-      <div id="shop-items" class="items grid grid-cols-2 gap-[10px] mt-[16px] sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7 premium:grid-cols-9 ">
+  <section id="shop" class="container">
+    <section class="shop-holder">
+      <h1 class="shop-all">all</h1>
+      <hr class="shop-hr" />
+      <div id="shop-items" class="items">
         {% for photocard in photocards %}
-          <div class="photocard cursor-pointer overflow-hidden w-[150px] h-auto flex flex-col items-center gap-y-[10px] pb-2 bg-black rounded-sm hover:-translate-y-1 hover:shadow-sm hover:shadow-white transition-all">
-            <img src="{{photocard.imageURL}}" alt="photocard" class="photocard-image w-[150px] h-[150px] object-cover" />
-            <div class="photocard-details w-[150px] flex flex-col justify-between items-start gap-4 px-4">
-              <div class="right flex flex-col gap-y-[10px]">
+          <div class="photocard">
+            <img src="{{photocard.imageURL}}" alt="photocard" class="photocard-image" />
+            <div class="photocard-details">
+              <div class="photocard-right">
                 <div class="name-theme">
-                  <h3 class="photocard-name font-bold w-[80px] truncate capitalize">{{photocard.name}}</h3>
-                  <h3 class="photocard-theme text-[12px] font-light w-[80px] italic truncate">{{photocard.theme}}</h3>
+                  <h3 class="photocard-name">{{photocard.name}}</h3>
+                  <h3 class="photocard-theme">{{photocard.theme}}</h3>
                 </div>
-                <p class="price text-electric-pink text-xs">
-                  <i class="fa-solid fa-peso-sign"></i> <span class="actual-price text-base">{{photocard.price}}</span>
+                <p class="photocard-price">
+                  <i class="fa-solid fa-peso-sign"></i> <span class="actual-price">{{photocard.price}}</span>
                 </p>
               </div>
-              <!-- <hr class="border-white w-full"> -->
-              <button data-photocard="{{photocard.id}}" data-action="add" class="update-cart ml-auto rounded bg-electric-pink border-transparent border p-2 text-xs capitalize transition-all" >
+              <button data-photocard="{{photocard.id}}" data-action="add" class="update-cart add-to-cart-btn" >
                 add to cart
               </button>
             </div>
@@ -44,16 +41,16 @@
 
 <!-- FOOTER -->
 
-  <footer class="container border-t-[8px] border-electric-pink bg-opaque-black z-[70] relative bottom-0 w-full px-[15px] sm:px-[25px] md:px-[50px] lg:px-[75px] xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
-    <div class="footer-full-content relative py-[50px] flex flex-col items-center gap-y-[80px]">
-      <h1 class="brand flex items-center gap-x-[8px] text-[2rem] font-[700] capitalize sm:text-[2.5rem] sm:gap-x-[12px] lg:text-[3rem] xl:text-[3.5rem] premium:text-[4rem]">
-        <img src="../../../static/assets/images/realpop-logo.png" alt="Realpop Logo" class="w-[60px] h-[60px] select-none sm:w-[70px] sm:h-[70px] lg:w-[80px] lg:h-[80px] xl:w-[90px] xl:h-[90px]" />
+  <footer class="container">
+    <div class="footer-full-content">
+      <h1 class="footer-brand">
+        <img src="../../../static/assets/images/realpop-logo.png" alt="Realpop Logo" class="footer-logo" />
         Realpop
       </h1>
-      <div class="content flex justify-between w-full">
-        <div class="navigate flex flex-col gap-y-[16px]">
-          <h2 class="text-[1.25rem] font-[700] capitalize sm:text-[1.5rem] lg:text-[1.8rem]">Navigate</h2>
-          <div class="links flex flex-col gap-y-[8px]">
+      <div class="footer-content">
+        <div class="navigate">
+          <h2 class="navigate-title">Navigate</h2>
+          <div class="as">
             <a href="/" class="footer-nav" >Home</a>
             <a href="/about" class="footer-nav" >About</a>
             <a href="/shop" class="footer-nav" >Shop</a>
@@ -61,46 +58,46 @@
             <a href="/help" class="footer-nav" >Help</a>
           </div>
         </div>
-        <div class="follow-us flex flex-col gap-y-[16px]">
-          <h2 class="text-[1.25rem] font-[700] capitalize sm:text-[1.5rem] lg:text-[1.8rem]">Follow Us</h2>
+        <div class="navigate">
+          <h2 class="navigate-title">Follow Us</h2>
           <div class="socmeds ">
-            <div class="chris-section flex flex-col gap-y-[8px] pb-2">
-              <p class="cursor-pointer font-semibold">Chris</p>
+            <div class="us-section">
+              <p class="owner-dev">Chris</p>
               <hr />
-              <a href="https://www.facebook.com/chrsdrl" target="_blank" class="socmed flex items-center gap-x-[8px]">
+              <a href="https://www.facebook.com/chrsdrl" target="_blank" class="socmed">
                 <div class=""><i class="fa-brands fa-facebook"></i></div>
                 <p>chrsdrl</p>
               </a>
-              <a href="https://www.instagram.com/lakezeus_/" target="_blank" class="socmed flex items-center gap-x-[8px]">
+              <a href="https://www.instagram.com/lakezeus_/" target="_blank" class="socmed">
                 <div class=""><i class="fa-brands fa-instagram"></i></div>
                 <p>lakezeus_</p>
               </a>
-              <a href="https://github.com/zyozyoo" target="_blank" class="socmed flex items-center gap-x-[8px]">
+              <a href="https://github.com/zyozyoo" target="_blank" class="socmed">
                 <div class=""><i class="fa-brands fa-github"></i></div>
                 <p>zyozyoo</p>
               </a>
             </div>
-            <div class="jam-section flex flex-col gap-y-[8px] pb-2">
-              <p class="cursor-pointer font-semibold">Moonbami</p>
+            <div class="us-section">
+              <p class="owner-dev">Jam</p>
               <hr />
-              <a href="https://www.facebook.com/MoonbamiOffcl" target="_blank" class="socmed flex items-center gap-x-[8px]">
-                <div class=""><i class="fa-brands fa-facebook"></i></div>
+              <a href="https://www.facebook.com/MoonbamiOffcl" target="_blank" class="socmed">
+                <i class="fa-brands fa-facebook"></i>
                 <p>MoonbamiOffcl</p>
               </a>
-              <a href="https://www.instagram.com/moonbamidesu/" target="_blank" class="socmed flex items-center gap-x-[8px]">
-                <div class=""><i class="fa-brands fa-instagram"></i></div>
+              <a href="https://www.instagram.com/moonbamidesu/" target="_blank" class="socmed">
+                <i class="fa-brands fa-instagram"></i>
                 <p>moonbamidesu</p>
               </a>
-              <a href="https://github.com/MoonbamiOfficial" target="_blank" class="socmed flex items-center gap-x-[8px]">
-                <div class=""><i class="fa-brands fa-github"></i></div>
+              <a href="https://github.com/MoonbamiOfficial" target="_blank" class="socmed">
+                <i class="fa-brands fa-github"></i>
                 <p>MoonbamiOfficial</p>
               </a>
             </div>
           </div>
         </div>
         <div class="navigate flex flex-col gap-y-[16px]">
-          <h2 class="text-[1.25rem] font-[700] capitalize sm:text-[1.5rem] lg:text-[1.8rem]">Photocards</h2>
-          <div class="links flex flex-col gap-y-[8px] list-none">
+          <h2 class="navigate-title">Photocards</h2>
+          <div class="as">
             <li>TWICE</li>
             <li>NMIXX</li>
             <li>NewJeans</li>
@@ -109,10 +106,10 @@
           </div>
         </div>
       </div>
-      <div class="copyright w-full text-center">
+      <div class="copyright">
         <hr class=""/>
-        <p class=" my-4 uppercase">&copy; <span class="footer-date"></span> Realpop from moonbami & jively</p>
+        <p class="footer-end">&copy; <span class="footer-date"></span> Realpop from moonbami & jively</p>
       </div>
     </div>
-</footer>
+  </footer>
 {% endblock content %}

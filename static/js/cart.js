@@ -57,8 +57,8 @@ for (let i = 0; i < updateButtons.length; i++) {
   })
 };
 
-const items = document.querySelector('#cart-items')
+const item = document.querySelector('#cart-item')
 const checkoutBtn = document.querySelector('.checkout-btn')
 
-if(!items) checkoutBtn.classList.add('hidden')
+if(!item) checkoutBtn.classList.add('hide-checkout-btn')
   

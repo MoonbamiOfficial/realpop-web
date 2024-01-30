@@ -1,0 +1,107 @@
+#contact {
+  margin-top: 60px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+.message-contact {
+  background-color: var(--deep-violet);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem/* 32px */;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.title-contact {
+  font-size: 2.50rem/* 40px */;
+  font-weight: 700;
+}
+.contact-box {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1rem/* 16px */;
+  row-gap: 2rem/* 32px */;
+}
+.input-contact-section {
+  display: flex;
+  flex-direction: column;
+  column-gap: 8px;
+}
+.input-contact-text {
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background-color: transparent;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  color: white;
+  border-color: black;
+  outline: none;
+}
+.input-contact-text::placeholder {
+  color: gray;
+}
+.send-message-btn {
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem/* 20px */;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: var(--electric-pink);
+  color: white;
+  border-radius: 80px;
+  outline-width: 0px;
+  border-width: 0px;
+  margin-left: auto;
+  cursor: pointer;
+}
+.realpop-team {
+  background-color: black;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+.team-box {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 50px;
+}
+.rp-role {
+  cursor: pointer;
+}
+.github-repo {
+  grid-column: span 2 / span 2;
+}
+.repo {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  font-size: 1.5rem/* 24px */;
+}
+.contact-logo {
+  font-size: 3rem/* 48px */;
+}
+.contact-logo-title {
+  font-weight: 700;
+}
+.contact-link {
+  color: rgb(96 165 250);
+}
+.contact-link:hover {
+  text-decoration-line: underline;
+}
+.address { 
+  text-transform: capitalize;
+}

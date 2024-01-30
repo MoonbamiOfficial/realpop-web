@@ -1,8 +1,7 @@
-{% load static tailwind_tags %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% tailwind_css %}
     <script type="text/javascript">
       const user = '{{request.user}}';
 
@@ -43,40 +42,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{% static 'assets/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'styles/globals.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/header.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/about.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/shop.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/contact.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/help.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/login.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/signup.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/cart.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/checkout.css' %}">
     <title>Realpop</title>
   </head>
   <body>
-    <div class="top-0 fixed z-[100] h-[60px] w-full bg-black " ></div>
-    <header class="container fixed left-[50%] translate-x-[-50%] top-0 z-[100] h-[60px] w-full flex justify-between items-center px-16 transition-all" >
-      <div class="flex items-center gap-2">
-        <a id="brand" href="/" class=" flex items-center gap-2 ">
-          <img src="{% static 'assets/images/realpop-logo.png' %}" alt="Realpop Logo" class="w-[40px] h-[40px] block"/>
-          <h1 href="/" class="text-[1.75rem] font-[700] capitalize block">Realpop</h1>
+    <div class="header-bg" ></div>
+    <header id="main-header" class="container " >
+      <div class="brand-nav">
+        <a id="brand" href="/" >
+          <img src="{% static 'assets/images/realpop-logo.png' %}" alt="Realpop Logo" class="realpop-logo"/>
+          <h1 href="/" class="realpop-brand">Realpop</h1>
         </a>
-        <div id="links" class="">
-          <div class="main-nav-container flex gap-x-1">
-            <a href="/" class="main-nav ">Home</a>
-            <a href="/about" class="main-nav ">About</a>
-            <a href="/shop" class="main-nav ">Shop</a>
-            <a href="/contact" class="main-nav ">Contact</a>
-            <a href="/help" class="main-nav ">Help</a>
-          </div>
+        <div class="main-nav-container">
+          <a href="/" class="main-nav">Home</a>
+          <a href="/about" class="main-nav">About</a>
+          <a href="/shop" class="main-nav">Shop</a>
+          <a href="/contact" class="main-nav">Contact</a>
+          <a href="/help" class="main-nav">Help</a>
         </div>
       </div>
-      <div id="right" class=" flex justify-end items-center gap-5">
-        <p class="capitalize">hello, <span class="font-semibold text-electric-pink">{{request.user}}</span></p>
+      <div id="user-cart">
+        <p class="hello">hello, <span class="hello-user">{{request.user}}</span></p>
         {% if request.user.is_authenticated %}
-          <a href="{% url 'logout' %}" class="logout capitalize text-sm rounded-lg border border-electric-pink hover:bg-electric-pink px-4 py-2">
+          <a href="{% url 'logout' %}" class="logout">
             log out
           </a>
         {% else %}
-          <a href="{% url 'login' %}" class="logout capitalize text-sm rounded-lg border border-electric-pink hover:bg-electric-pink px-4 py-2">
+          <a href="{% url 'login' %}" class="login">
             login
           </a>
         {% endif %}
-        <a href="/cart" class="cart relative w-[40px] h-[40px] items-center justify-center rounded-full hover:bg-electric-pink transition-all text-xl flex">
+        <a href="/cart" class="cart">
           <i class="fa-solid fa-cart-shopping"></i>
-          <div class="cart-num absolute top-[-4px] right-[-4px] rounded-full p-1 bg-electric-pink text-xs text-center">{{cartitems}}</div>
+          <div class="cart-num">{{cartitems}}</div>
         </a>
         </div>
       </div>

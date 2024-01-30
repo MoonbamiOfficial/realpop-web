@@ -1,76 +1,75 @@
 {% extends 'index.html' %}
-{% load static tailwind_tags %}
+{% load static %}
 {% block content %}
-{% tailwind_css %}
-  <section id="cart" class="container mt-[60px] py-[100px] h-full relative ">
-    <div class="content flex flex-col gap-10 bg-opaque-black mx-[500px] px-8 py-16">
-      <h1 class="text-center text-3xl font-bold">Cart</h1>
-      <div id="cart-items" class="items flex flex-col border border-gray-400">
-        <header class="cart-header flex justify-between items-center py-4 px-[205px] ">
-          <h1 class="font-semibold capitalize">item</h1>
-          <h1 class="font-semibold capitalize">quantity</h1>
-        </header>
+  <section id="cart" class="container">
+    <div class="cart-content">
+      <h1 class="cart-title">Cart</h1>
+      <div id="cart-items" class="items">
+        <div class="cart-header ">
+          <h1 class="cart-header-title">item</h1>
+          <h1 class="cart-header-title">quantity</h1>
+        </div>
         {% for item in items %}
-          <div id="cart-item" class="item flex border items-center mb-3 justify-between pr-10 border-gray-500">
-            <div class="item-detail flex items-center w-[500px] pr-[50px] bg-gradient-to-r from-gray-500 to-transparent">
-              <img src="{{item.photocard.imageURL}}" alt="" class="photocard-image w-[100px] h-[100px] object-cover mr-5" />
-              <div class="text-details flex flex-col py-2 mb-auto ">
-                <h1 class="font-semibold truncate w-[200px]">{{item.photocard.name}}</h1>
-                <p class="text-sm truncate w-[200px]">{{item.photocard.theme}}</p>
-                <p class="text-sm mt-2">{{item.quantity}}<span>x</span></p>
+          <div id="cart-item" class="item">
+            <div class="item-detail">
+              <img src="{{item.photocard.imageURL}}" alt="" class="photocard-image-cart" />
+              <div class="cart-text-details">
+                <h1 class="pc-name">{{item.photocard.name}}</h1>
+                <p class="pc-theme">{{item.photocard.theme}}</p>
+                <p class="pc-quantity">{{item.quantity}}<span>x</span></p>
               </div>
-              <p class="font-semibold text-xs ml-auto">
+              <p class="pc-price">
                 <i class="fa-solid fa-peso-sign"></i> 
-                <span class="text-base">{{item.get_total}}</span>
+                <span class="pc-actual-price">{{item.get_total}}</span>
               </p>
             </div>
-            <div class="quantity flex gap-3">
-              <button data-photocard="{{item.photocard.id}}" data-action="minus" class="update-cart rounded-md border border-electric-pink hover:bg-electric-pink p-2 text-center">
+            <div class="quantity">
+              <button data-photocard="{{item.photocard.id}}" data-action="minus" class="update-cart cart-quantity-btn">
                 <i class="fa-solid fa-minus"></i>
               </button>
-              <p class="quantity-display rounded-md border border-gray-400 p-2 text-center">{{item.quantity}}</p>
-              <button data-photocard="{{item.photocard.id}}" data-action="add" class="update-cart rounded-md border border-electric-pink hover:bg-electric-pink p-2 text-center">
+              <p class="quantity-display">{{item.quantity}}</p>
+              <button data-photocard="{{item.photocard.id}}" data-action="add" class="update-cart cart-quantity-btn">
                 <i class="fa-solid fa-plus"></i>
               </button>
             </div>
-            <button data-photocard="{{item.photocard.id}}" data-action="remove" class="update-cart rounded-lg border border-electric-pink w-[100px] h-[40px] capitalize hover:bg-electric-pink ">remove</button>
+            <button data-photocard="{{item.photocard.id}}" data-action="remove" class="update-cart remove-to-cart-btn">remove</button>
           </div>
         {% endfor %}
-        <div class="cart-details border mt-auto p-8 pr-10 border-gray-400">
-          <div class="total-photocards flex gap-2 ">
-            <p class="capitalize w-[100px] text-right ">photocards:</p>
-            <p class="text-xl font-semibold">{{order.get_items_total}}<span>x</span></span>
+        <div class="cart-details">
+          <div class="total-photocards">
+            <p class="total-photocards-title">photocards:</p>
+            <p class="get-items-total">{{order.get_items_total}}<span>x</span></span>
           </div>
-          <div class="total-money flex gap-2 ">
-            <p class="capitalize w-[100px] text-right ">total:</p>
-            <p class="text-electric-pink text-sm">
+          <div class="total-money">
+            <p class="total-money-title">total:</p>
+            <p class="total-price">
               <i class="fa-solid fa-peso-sign"></i>
-              <span class="text-xl font-semibold">{{order.get_cart_total}}</span>
+              <span class="get-cart-total">{{order.get_cart_total}}</span>
             </p>
           </div>
         </div>
       </div>
-      <div class="flex">
-        <a href="/shop" class=" rounded-lg border border-electric-pink px-10 py-4 capitalize ">
+      <div class="btn-bottom-holder">
+        <a href="/shop" class="back-to-shop-btn">
           <i class="fa-solid fa-arrow-left"></i> back to shop
         </a>
-        <a href="/cart/checkout" class="checkout-btn ml-auto rounded-lg bg-electric-pink px-10 py-4 capitalize ">checkout</a>
+        <a href="/cart/checkout" class="checkout-btn ">checkout</a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
 
-  <footer class="container border-t-[8px] border-electric-pink bg-opaque-black z-[70] relative bottom-0 w-full px-[15px] sm:px-[25px] md:px-[50px] lg:px-[75px] xl:px-[100px] 2xl:px-[150px] premium:px-[200px]">
-    <div class="footer-full-content relative py-[50px] flex flex-col items-center gap-y-[80px]">
-      <h1 class="brand flex items-center gap-x-[8px] text-[2rem] font-[700] capitalize sm:text-[2.5rem] sm:gap-x-[12px] lg:text-[3rem] xl:text-[3.5rem] premium:text-[4rem]">
-        <img src="../../../static/assets/images/realpop-logo.png" alt="Realpop Logo" class="w-[60px] h-[60px] select-none sm:w-[70px] sm:h-[70px] lg:w-[80px] lg:h-[80px] xl:w-[90px] xl:h-[90px]" />
+  <footer class="container">
+    <div class="footer-full-content">
+      <h1 class="footer-brand">
+        <img src="../../../static/assets/images/realpop-logo.png" alt="Realpop Logo" class="footer-logo" />
         Realpop
       </h1>
-      <div class="content flex justify-between w-full">
-        <div class="navigate flex flex-col gap-y-[16px]">
-          <h2 class="text-[1.25rem] font-[700] capitalize sm:text-[1.5rem] lg:text-[1.8rem]">Navigate</h2>
-          <div class="links flex flex-col gap-y-[8px]">
+      <div class="footer-content">
+        <div class="navigate">
+          <h2 class="navigate-title">Navigate</h2>
+          <div class="as">
             <a href="/" class="footer-nav" >Home</a>
             <a href="/about" class="footer-nav" >About</a>
             <a href="/shop" class="footer-nav" >Shop</a>
@@ -78,46 +77,46 @@
             <a href="/help" class="footer-nav" >Help</a>
           </div>
         </div>
-        <div class="follow-us flex flex-col gap-y-[16px]">
-          <h2 class="text-[1.25rem] font-[700] capitalize sm:text-[1.5rem] lg:text-[1.8rem]">Follow Us</h2>
+        <div class="navigate">
+          <h2 class="navigate-title">Follow Us</h2>
           <div class="socmeds ">
-            <div class="chris-section flex flex-col gap-y-[8px] pb-2">
-              <p class="cursor-pointer font-semibold">Chris</p>
+            <div class="us-section">
+              <p class="owner-dev">Chris</p>
               <hr />
-              <a href="https://www.facebook.com/chrsdrl" target="_blank" class="socmed flex items-center gap-x-[8px]">
+              <a href="https://www.facebook.com/chrsdrl" target="_blank" class="socmed">
                 <div class=""><i class="fa-brands fa-facebook"></i></div>
                 <p>chrsdrl</p>
               </a>
-              <a href="https://www.instagram.com/lakezeus_/" target="_blank" class="socmed flex items-center gap-x-[8px]">
+              <a href="https://www.instagram.com/lakezeus_/" target="_blank" class="socmed">
                 <div class=""><i class="fa-brands fa-instagram"></i></div>
                 <p>lakezeus_</p>
               </a>
-              <a href="https://github.com/zyozyoo" target="_blank" class="socmed flex items-center gap-x-[8px]">
+              <a href="https://github.com/zyozyoo" target="_blank" class="socmed">
                 <div class=""><i class="fa-brands fa-github"></i></div>
                 <p>zyozyoo</p>
               </a>
             </div>
-            <div class="jam-section flex flex-col gap-y-[8px] pb-2">
-              <p class="cursor-pointer font-semibold">Moonbami</p>
+            <div class="us-section">
+              <p class="owner-dev">Jam</p>
               <hr />
-              <a href="https://www.facebook.com/MoonbamiOffcl" target="_blank" class="socmed flex items-center gap-x-[8px]">
-                <div class=""><i class="fa-brands fa-facebook"></i></div>
+              <a href="https://www.facebook.com/MoonbamiOffcl" target="_blank" class="socmed">
+                <i class="fa-brands fa-facebook"></i>
                 <p>MoonbamiOffcl</p>
               </a>
-              <a href="https://www.instagram.com/moonbamidesu/" target="_blank" class="socmed flex items-center gap-x-[8px]">
-                <div class=""><i class="fa-brands fa-instagram"></i></div>
+              <a href="https://www.instagram.com/moonbamidesu/" target="_blank" class="socmed">
+                <i class="fa-brands fa-instagram"></i>
                 <p>moonbamidesu</p>
               </a>
-              <a href="https://github.com/MoonbamiOfficial" target="_blank" class="socmed flex items-center gap-x-[8px]">
-                <div class=""><i class="fa-brands fa-github"></i></div>
+              <a href="https://github.com/MoonbamiOfficial" target="_blank" class="socmed">
+                <i class="fa-brands fa-github"></i>
                 <p>MoonbamiOfficial</p>
               </a>
             </div>
           </div>
         </div>
         <div class="navigate flex flex-col gap-y-[16px]">
-          <h2 class="text-[1.25rem] font-[700] capitalize sm:text-[1.5rem] lg:text-[1.8rem]">Photocards</h2>
-          <div class="links flex flex-col gap-y-[8px] list-none">
+          <h2 class="navigate-title">Photocards</h2>
+          <div class="as">
             <li>TWICE</li>
             <li>NMIXX</li>
             <li>NewJeans</li>
@@ -126,9 +125,9 @@
           </div>
         </div>
       </div>
-      <div class="copyright w-full text-center">
+      <div class="copyright">
         <hr class=""/>
-        <p class=" my-4 uppercase">&copy; <span class="footer-date"></span> Realpop from moonbami & jively</p>
+        <p class="footer-end">&copy; <span class="footer-date"></span> Realpop from moonbami & jively</p>
       </div>
     </div>
   </footer>
